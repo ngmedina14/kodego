@@ -23,11 +23,12 @@
 
         th,
         td {
-            border: 2px solid rgb(65, 85, 107);
+            border: 0px solid white;
         }
-
-        .error {
-            color: red;
+        fieldset{
+            margin: auto;
+            display: block;
+            width: fit-content;
         }
     </style>
 </head>
@@ -40,55 +41,90 @@
         </dt>
         <form action="studenttable.html">
 
-            <table>
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <br>
-                    <div>
-                        <label for="form-firstname">First Name: </label>
-                        <input id="form-firstname" type="text" name="firstname" placeholder="First Name" size="50" />
-                    </div>
-                    <div>
-                        <label for="form-middlename">Middle Name: </label>
-                        <input id="form-middlename" type="text" name="middlename" placeholder="Middle Name" size="50" />
-                    </div>
-                    <div>
-                        <label for="form-lastname">Last Name: </label>
-                        <input id="form-lastname" type="text" name="lastname" placeholder="Last Name" size="50" />
-                    </div>
-                    <div>
-                        <label for="form-address">Address</label><br/>
-                        <textarea name="address" placeholder="street - state/province - city" id="form-address" cols="50" rows="2"></textarea>
-                    </div>
-                    <div>
-                        <label>Gender</label>
-                        <input type="radio" name="gender">Male
-                        <input type="radio" name="gender">Female
-                    </div>
-                    <div>
-                        <label for="form-path">Career Path</label>
-                        <select name="path" id="form-path" autocomplete="off">
-                            <option selected value="0">-</option>
-                            <option value="1">Froht-end Developer</option>
-                            <option value="2">Back-end Developer</option>
-                            <option value="3">Fullstack Developer</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Frontend Technology</label>
-                        <input type="checkbox" name="html">HTML
-                        <input type="checkbox" name="css">CSS
-                        <input type="checkbox" name="javascript">Javascript
-                        <input type="checkbox" name="javascript">Mysql
-                        <input type="checkbox" name="javascript">Php
-                        <input type="checkbox" name="javascript">Laravel
-                        <input type="checkbox" name="javascript">React JS
-                    </div>
-                    <div>
-                        <button type="submit">Submit</button> <input type="reset">
-                    </div>
-                </fieldset>
-            </table>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <br>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label for="form-firstname">First Name: </label>
+                        </td>
+                        <td>
+                            <input id="form-firstname" type="text" name="firstname" placeholder="First Name"
+                                size="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="form-middlename">Middle Name: </label>
+                        </td>
+                        <td>
+                            <input id="form-middlename" type="text" name="middlename" placeholder="Middle Name"
+                                size="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="form-lastname">Last Name: </label>
+
+                        </td>
+                        <td>
+                            <input id="form-lastname" type="text" name="lastname" placeholder="Last Name" size="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="form-address">Address</label><br />
+                        </td>
+                        <td>
+                            <textarea name="address" placeholder="street - state/province - city" id="form-address"
+                                cols="50" rows="2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Gender</label>
+
+                        </td>
+                        <td>
+                            <input type="radio" name="gender">Male
+                            <input type="radio" name="gender">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="form-path">Career Path</label>
+                        </td>
+                        <td>
+                            <select name="path" id="form-path" autocomplete="off">
+                                <option selected value="0">-</option>
+                                <option value="1">Froht-end Developer</option>
+                                <option value="2">Back-end Developer</option>
+                                <option value="3">Fullstack Developer</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Frontend Technology</label>
+
+                        </td>
+                        <td>
+                            <input type="checkbox" name="html">HTML
+                            <input type="checkbox" name="css">CSS
+                            <input type="checkbox" name="javascript">Javascript
+                            <input type="checkbox" name="javascript">Mysql
+                            <input type="checkbox" name="javascript">Php
+                            <input type="checkbox" name="javascript">Laravel
+                            <input type="checkbox" name="javascript">React JS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            <button type="submit">Submit</button> <input type="reset">
+                        </td>
+                    </tr>
+            </fieldset>
         </form>
         <dd>
         </dd>
