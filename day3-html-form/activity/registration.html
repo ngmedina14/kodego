@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <style>
+        header {
+            text-align: center;
+            font-size: xx-large;
+            background-color: #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            margin-top: -100px;
+        }
+
+        h1 {
+            padding-top: 80px;
+        }
+
+        th,
+        td {
+            border: 2px solid rgb(65, 85, 107);
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header><span>REGISTRATION FORM</span></header>
+    <dl>
+        <dt>
+            <h1>Activity HTML Forms</h1>
+        </dt>
+        <form action="studenttable.html">
+
+            <table>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <br>
+                    <div>
+                        <label for="form-firstname">First Name: </label>
+                        <input id="form-firstname" type="text" name="firstname" placeholder="First Name" size="50" />
+                    </div>
+                    <div>
+                        <label for="form-middlename">Middle Name: </label>
+                        <input id="form-middlename" type="text" name="middlename" placeholder="Middle Name" size="50" />
+                    </div>
+                    <div>
+                        <label for="form-lastname">Last Name: </label>
+                        <input id="form-lastname" type="text" name="lastname" placeholder="Last Name" size="50" />
+                    </div>
+                    <div>
+                        <label for="form-address">Address</label><br/>
+                        <textarea name="address" placeholder="street - state/province - city" id="form-address" cols="50" rows="2"></textarea>
+                    </div>
+                    <div>
+                        <label>Gender</label>
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                    </div>
+                    <div>
+                        <label for="form-path">Career Path</label>
+                        <select name="path" id="form-path" autocomplete="off">
+                            <option selected value="0">-</option>
+                            <option value="1">Froht-end Developer</option>
+                            <option value="2">Back-end Developer</option>
+                            <option value="3">Fullstack Developer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Frontend Technology</label>
+                        <input type="checkbox" name="html">HTML
+                        <input type="checkbox" name="css">CSS
+                        <input type="checkbox" name="javascript">Javascript
+                        <input type="checkbox" name="javascript">Mysql
+                        <input type="checkbox" name="javascript">Php
+                        <input type="checkbox" name="javascript">Laravel
+                        <input type="checkbox" name="javascript">React JS
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button> <input type="reset">
+                    </div>
+                </fieldset>
+            </table>
+        </form>
+        <dd>
+        </dd>
+    </dl>
+</body>
+
+</html>
