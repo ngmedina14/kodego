@@ -124,6 +124,9 @@ input[type=range] {
 .white2 {
     color: rgb(184, 181, 166);
 }
+.white3 {
+    color: rgba(255, 248, 220, 0.836);
+}
 
 .center-text {
     text-align: center;
