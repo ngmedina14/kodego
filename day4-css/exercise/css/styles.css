@@ -1,0 +1,174 @@
+/* Division */
+
+article {
+    background-color: cornsilk;
+    width: 8.5in;
+    height: 11in;
+    transform: scale(1);
+}
+
+section.side-content {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(1, 54, 54);
+    float: left;
+}
+
+section.main-content {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(209, 241, 241);
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+aside {
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+/* Specific */
+
+dd.side-content {
+    margin-top: -1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    line-height: 1.5em;
+  }
+  dd.main-content {
+    margin-left: 1em;
+  }
+
+hr {
+    width: 15%;
+    border: 1px solid gray;
+}
+
+
+div.paragraph-space {
+    width: 100%;
+    padding-top: 26px;
+}
+
+span.white-underline{
+    border-bottom: 1px solid rgb(231, 225, 195)
+}
+
+img.profile {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+input[type=range] {
+    background-color: steelblue;
+}
+
+/* Universal */
+
+.center-content {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+
+.larger {
+    font-size: 24pt;
+}
+
+.large {
+    font-size: 16pt;
+}
+
+.medium {
+    font-size: 12pt;
+}
+
+.small {
+    font-size: 10pt;
+}
+
+
+
+.bolder {
+    font-weight: bolder;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.gray1 {
+    color: slategray;
+}
+.gray2 {
+    color: rgb(74, 79, 83);
+}
+
+.white1 {
+    color: cornsilk;
+}
+
+.white2 {
+    color: rgb(231, 225, 195);
+}
+
+.center-text {
+    text-align: center;
+}
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.lowecase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.family1{
+font-family: 'Courier New', Courier, monospace;
+}
+.family2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.family3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.family4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.family5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.family6{
+    font-family: 'Times New Roman', Times, serif;
+}
+.family7{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.family8{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.family9{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.family10{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.family11{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.family12{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
