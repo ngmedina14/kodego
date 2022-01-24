@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    font: 14px Arial;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    background-color: linen;
+}
+
+header h1 {
+    padding: 20px 20px;
+    background-color: rgb(169, 224, 169);
+    font-size: 24px;
+    text-align: center;
+}
+
+/* nav {
+    background-color: rgb(19, 41, 41);
+    height: 6vh;
+}
+
+aside {
+    float: left;
+    height: inherit;
+    box-sizing: border-box;
+    padding-left: 1rem;
+}
+
+aside a {
+    height: inherit;
+    color: rgb(241, 235, 214);
+    font-size: 15px;
+    align-items: center;
+    display: grid;
+} */
+
+nav{
+    background-color: rgb(19, 41, 41);
+    height: 6vh;
+}
+nav ul li{
+    margin-left: -3rem;
+    background-color: darkslategray;
+    list-style: none;
+}
+nav ul li a {
+    color: rgb(236, 234, 224);
+    float: left;
+    font-size: 20px;
+    margin-left: 1rem;
+    height: 6vh;
+
+    /* center text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a:hover{
+    box-shadow: inset 0px 2px 0px 0px #FFF;
+
+}
+
+main {
+    width: 100%;
+    background-color: lightyellow;
+}
+
+section {
+    padding: 5px;
+    float: left;
+    width: 33.333%;
+    border: 1px solid green;
+    box-sizing:border-box;
+    min-height: 250px;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: darkgrey;
+}

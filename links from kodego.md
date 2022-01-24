@@ -6,3 +6,6 @@
 
 #### Random img generator
 `http://placeimg.com/`
+
+#### Interactive Cheat Sheet
+`https://htmlcheatsheet.com/css/`
