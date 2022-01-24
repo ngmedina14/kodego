@@ -38,7 +38,7 @@ aside a {
 
 nav{
     background-color: rgb(19, 41, 41);
-    height: 6vh;
+    height: 3em;
 }
 nav ul li{
     margin-left: -3rem;
@@ -50,7 +50,7 @@ nav ul li a {
     float: left;
     font-size: 20px;
     margin-left: 1rem;
-    height: 6vh;
+    height: 3rem;
 
     /* center text */
     display: flex;
