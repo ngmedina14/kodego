@@ -46,6 +46,9 @@ main {
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
 }
+.input:hover{
+    background-color: rgba(255, 255, 255, 0.123);
+}
 
 section {
     height: 2em;
@@ -58,6 +61,7 @@ input[type=text] {
     outline: none;
     caret-color: whitesmoke;
 }
+
 .button{
     margin: 0px 5px;
     text-align: center;
