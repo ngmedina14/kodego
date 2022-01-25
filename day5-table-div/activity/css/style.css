@@ -1,6 +1,5 @@
 * {
     margin: 0px;
-    font: 14px Arial;
     text-decoration: none;
 }
 
@@ -42,7 +41,6 @@ nav{
 }
 nav ul li{
     margin-left: -3rem;
-    background-color: darkslategray;
     list-style: none;
 }
 nav ul li a {
@@ -73,9 +71,10 @@ section {
     width: 33.333%;
     border: 1px solid green;
     box-sizing:border-box;
-    min-height: 250px;
+    min-height: 200px;
     max-height: 250px;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .clearfix::after {
@@ -86,6 +85,6 @@ section {
 
 footer {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     background-color: darkgrey;
 }
