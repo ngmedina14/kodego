@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div{
+            background: cornsilk;
+            border: 10px solid red;
+        }
+        .box-border-box{
+            box-sizing: border-box;
+            border: 10px solid rgb(36, 140, 182);
+
+        }
+        .box-content-box{
+            box-sizing: content-box;
+            border: 10px solid rgb(97, 182, 18);
+        }
+        .outline{
+            outline: cornsilk solid 5px;
+        }
+        .cursor{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit mollitia similique dolorem commodi illo iste? Aut quae corporis tempore exercitationem, sed deleniti, non, omnis placeat provident laboriosam ipsa maiores harum?</p>
+        <div class="box-border-box">
+            dasdsdasd
+        </div>
+        <div class="box-content-box">
+            asdasd
+        </div>
+        <div class="outline cursor">
+            asdasd
+        </div>
+    </div>
+</body>
+</html>

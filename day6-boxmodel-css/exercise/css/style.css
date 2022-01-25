@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(36, 35, 35);
+    text-decoration: none;
+}
+
+nav {
+    height: 2em;
+}
+
+nav .item {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.hover:hover {
+    box-shadow: inset 4px 4px 15px 0px #ffffff;
+}
+.line:hover {
+    box-shadow: inset 0px -22px 0px -21px #858383;
+}
+
+.white1 {
+    color: white;
+}
+.white2 {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.input {
+    padding: 5px 10px;
+    border: 2px solid whitesmoke;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+section {
+    height: 2em;
+    display: flex;
+    padding: 20px;
+}
+
+input[type=text] {
+    border: none;
+    outline: none;
+    caret-color: whitesmoke;
+}
+.button{
+    margin: 0px 5px;
+    text-align: center;
+    border: none;
+    background-color: rgba(138, 123, 123, 0.445);
+    padding: 5px 7px;
+    border-radius: 3px;
+}
+.button:hover{
+    outline: 1px solid rgba(245, 245, 245, 0.315);
+}
+
+.language{
+    min-height: 200px;
+    max-height: 500px;
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+}
+.language div a{
+    color: cornflowerblue;
+}
+
+footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+
+.footer {
+    height: 1em;
+    padding: 15px 40px;
+    background-color: rgb(23, 24, 24);
+    margin: 1px;
+}
+
+.footer span{
+    background-color: rgb(23, 24, 24);
+}
+aside{
+    position: absolute;
+    background-color: rgb(23, 24, 24);
+}
+aside a {
+    padding: 0px 3px;
+    background-color: rgb(23, 24, 24);
+}
+.position-right{
+    right: 40px;
+}
+
+
+.color1{
+background-color: cornsilk;
+}
+.color2{
+    background-color: cyan;
+
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+.center-flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center-grid {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}

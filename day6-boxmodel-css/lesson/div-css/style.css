@@ -1,0 +1,178 @@
+.div1 {
+    height: 100px;
+    width: 100px;
+}
+
+.div2 {
+    height: 300px;
+    width: 100px;
+}
+
+.div3 {
+    height: 100px;
+    width: 300px;
+}
+
+.color1 {
+    background-color: darkgoldenrod;
+}
+
+.color2 {
+    background-color: crimson;
+}
+
+.color3 {
+    background-color: cornflowerblue;
+}
+.color4 {
+    background:linear-gradient(tomato,cornsilk,cornflowerblue);
+}
+.color5 {
+    background:radial-gradient(tomato,cornsilk,cornflowerblue);
+}
+.color6 {
+    background:repeating-linear-gradient(tomato,cornsilk,cornflowerblue);
+}
+.color7 {
+    background:repeating-linear-gradient(to right,rgba(0, 0, 0, 0.185),rgba(0, 0, 0, 0.288)),url("http://placeimg.com/80/200/nature");
+}
+
+.center-text {
+    text-align: center;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+/* ***********Display************ */
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.none {
+    display: none;
+}
+
+/* ***********position************ */
+
+.position1 {
+    left: 100px;
+    top: 100px;
+}
+
+.position2 {
+    left: 200px;
+    top: 200px;
+}
+
+.position3 {
+    left: 300px;
+    top: 300px;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+/* ***********FLOAT************ */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix::after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+/* ***********PSEUDO CLASS************ */
+
+a:link {
+    color: cornflowerblue;
+}
+
+a:visited {
+    color: crimson;
+}
+
+a:focus {
+    color: lawngreen;
+}
+
+a:active {
+    color: dimgrey;
+}
+
+.pseudo-class li {
+    border-top: 12px solid skyblue;
+}
+
+.pseudo-class li:first-child {
+    border-top: 12px solid none;
+    color: slateblue;
+}
+
+.pseudo-class li:last-child {
+    background-color: slategray;
+}
+
+.table {
+    text-align: center;
+    background-color: cornsilk;
+}
+
+.table thead {
+    background-color: cornflowerblue;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgb(161, 203, 206);
+}
+
+/* ***********SELECTOR************ */
+input[type="text"]{
+    background-color: cornflowerblue;
+}
+input[type="password"]{
+    background-color: cornflowerblue;
+}
+
+/* ***********GRADIENT************ */
