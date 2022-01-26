@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,458 @@
     <title>FLEX</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <dl>
         <dt>
             <h1>Flex</h1>
         </dt>
         <dd>
-            <div class="flex">
-                <!-- flex -->
-                <div class="flex div7 border1-black">
-                    <div class="div1 color1 "><h1>1</h1></div> 
-                    <div class="div1 color2 "><h1>2</h1></div>
-                    <div class="div1 color3 "><h1>3</h1></div>
+                <h4>display:flex;</h4>
+                <div class="flex div5 border1-black">
+                    <div class="div0 color1 ">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2 ">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3 ">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-direction: row-reverse;</h4>
+                <div class="flex flex-direction-row-reverse div5 border1-black">
+                    <div class="div0 color1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-direction: column;</h4>
+                <div class="flex flex-direction-column div6 border1-black">
+                    <div class="div0 color1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-direction: column-reverse;</h4>
+                <div class="flex flex-direction-column-reverse div6 border1-black">
+                    <div class="div0 color1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-wrap: wrap;</h4>
+                <div class="flex flex-wrap div5 border1-black">
+                    <div class="div0 color1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3">
+                        <h1>3</h1>
+                    </div>
+                    <div class="div0 color4">
+                        <h1>4</h1>
+                    </div>
+                    <div class="div0 color5">
+                        <h1>5</h1>
+                    </div>
+                    <div class="div0 color6">
+                        <h1>6</h1>
+                    </div>
+                    <div class="div0 color7">
+                        <h1>7</h1>
+                    </div>
+                    <div class="div0 color8">
+                        <h1>8</h1>
+                    </div>
+                </div>
+                <h4>flex-wrap: nowrap;</h4>
+                <div class="flex flex-nowrap div5 border1-black">
+                    <div class="div0 color1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3">
+                        <h1>3</h1>
+                    </div>
+                    <div class="div0 color4">
+                        <h1>4</h1>
+                    </div>
+                    <div class="div0 color5">
+                        <h1>5</h1>
+                    </div>
+                    <div class="div0 color6">
+                        <h1>6</h1>
+                    </div>
+                    <div class="div0 color7">
+                        <h1>7</h1>
+                    </div>
+                    <div class="div0 color8">
+                        <h1>8</h1>
+                    </div>
+                </div>
+                <h4>flex:1;</h4>
+                <div class="flex div5 border1-black">
+                    <div class="div0 color1 flex1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2 ">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3 ">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-grow:1;</h4>
+                <div class="flex div5 border1-black">
+                    <div class="div0 color1 flex-grow1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2 flex-grow1">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3 ">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <h4>flex-shrink:1;</h4>
+                <div class="flex div5 border1-black">
+                    <div class="div0 color1 flex1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="div0 color2 flex-shrink1">
+                        <h1>2</h1>
+                    </div>
+                    <div class="div0 color3 flex1">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                
+        </dd>
+        <dt>
+            <h1>Horizontal - Main</h1>
+        </dt>
+        <dd>
+            <h4>justify-content:center;</h4>
+            <div class="flex justify-center div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>justify-content:flex-start;</h4>
+            <div class="flex justify-flex-start div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>justify-content:flex-end;</h4>
+            <div class="flex justify-flex-end div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>justify-content:space-between;</h4>
+            <div class="flex justify-space-between div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>justify-content:space-around;</h4>
+            <div class="flex justify-space-around  div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>justify-content:space-evenly;</h4>
+            <div class="flex justify-space-evenly div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
                 </div>
             </div>
         </dd>
         <dt>
-            <h1>Horizontal</h1>
+            <h1>Vertical - Cross</h1>
         </dt>
         <dd>
-            <h1>justify-content:space-between;</h1>
-            <!-- flex -->
-            <div class="flex justify-space-between width div4 border1-black">
-                <div class="div1 color1 "><h1>1</h1></div> 
-                <div class="div1 color2 "><h1>2</h1></div>
-                <div class="div1 color3 "><h1>3</h1></div>
+            <h4>align-center:center;</h4>
+            <div class="flex align-center div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>align-center:flex-start;</h4>
+            <div class="flex align-flex-start div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>align-center:flex-end;</h4>
+            <div class="flex align-flex-end div5 border1-black">
+                <div class="div0 color1 ">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>align-center:baseline;</h4>
+            <div class="flex align-baseline div5 border1-black">
+                <div class="div0 color1 ">
+                    <span>1</span>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h6>3</h6>
+                </div>
+            </div>
+            <h4>align-center:stretch;</h4>
+            <div class="flex align-stretch  div5 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2 ">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3 ">
+                    <h1>3</h1>
+                </div>
+            </div>
+            <h4>align-content:center;</h4>
+            <div class="flex flex-wrap content-center  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
+            </div>
+            <h4>align-content: flex-start;</h4>
+            <div class="flex flex-wrap content-flex-start  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
+            </div>
+            <h4>align-content:flex-end;</h4>
+            <div class="flex flex-wrap content-flex-end  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
+            </div>
+            <h4>align-content:space-between;</h4>
+            <div class="flex flex-wrap content-space-between  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
+            </div>
+            <h4>align-content: space-around;</h4>
+            <div class="flex flex-wrap content-space-around  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
+            </div>
+            <h4>align-content:stretch;</h4>
+            <div class="flex flex-wrap content-stretch  div7 border1-black">
+                <div class="div0 color1">
+                    <h1>1</h1>
+                </div>
+                <div class="div0 color2">
+                    <h1>2</h1>
+                </div>
+                <div class="div0 color3">
+                    <h1>3</h1>
+                </div>
+                <div class="div0 color4">
+                    <h1>4</h1>
+                </div>
+                <div class="div0 color5">
+                    <h1>5</h1>
+                </div>
+                <div class="div0 color6">
+                    <h1>6</h1>
+                </div>
+                <div class="div0 color7">
+                    <h1>7</h1>
+                </div>
+                <div class="div0 color8">
+                    <h1>8</h1>
+                </div>
             </div>
         </dd>
     </dl>
 </body>
+
 </html>
