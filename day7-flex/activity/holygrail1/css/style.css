@@ -1,0 +1,7 @@
+*{box-sizing: border-box;}
+body{margin: 0;}
+main {display: flex; min-height: 60vh;}
+main article {flex:1; background-color: rgb(131, 110, 25);}
+main nav,aside {flex:0 0 20vw;background-color: beige;}
+header,footer{background-color: rgb(132, 149, 98);height: 20vh;}
+header,footer,article,aside,nav{padding: 1em;}

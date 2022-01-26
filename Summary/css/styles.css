@@ -183,7 +183,64 @@ input[type="password"] {
     background: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.288)), url("http://placeimg.com/80/200/nature");
 }
 
+/* ***********FLEX************ */
 
+.flex {
+    display: flex;
+}
+
+/* ***********FLEX-HORIZONTAL************ */
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-baseline {
+    justify-content: baseline;
+}
+
+.justify-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.justify-safe {
+    justify-content: safe;
+}
+
+/* ***********FLEX-Vertical************ */
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-flexstart {
+    align-items: flex-start;
+}
+
+.align-flexend {
+    align-items: flex-end;
+}
+
+
+
+.grid {
+    display: grid;
+}
 
 
 

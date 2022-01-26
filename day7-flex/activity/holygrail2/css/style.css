@@ -1,0 +1,31 @@
+*{box-sizing: border-box;}
+body{margin: 0;}
+div,section{
+    display: flex;
+    flex: 1;
+}
+main{
+    flex: 1;
+}
+header,footer{
+    background-color: rgb(161, 185, 112);
+    flex:0 0 14vw
+}
+section{
+    min-height: 60vh;
+}
+article{
+flex:1;
+background-color: rgb(180, 151, 35);
+}
+aside{
+    flex:0 0 20vw;
+}
+aside{
+    background-color: beige;
+}
+nav{
+    background-color: gray;
+    min-width: 20vh;
+}
+header,footer,article,aside,nav{padding: 1em;}
