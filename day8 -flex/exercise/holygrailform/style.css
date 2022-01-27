@@ -9,11 +9,7 @@ body {
 
 /* ************COMBINED ************* */
 
-header, footer, article, aside, nav {
-    padding: 1em;
-}
-
-main, form, .item {
+main,article, form, .item {
     display: flex;
 }
 
@@ -27,7 +23,9 @@ label, form {
     width: max-content;
     background-color: beige;
 }
-
+header, footer, article, aside, nav {
+    padding: 1em;
+}
 
 /* ************DESCENDANTS ************* */
 
@@ -44,8 +42,9 @@ main nav {
 }
 
 main article {
+    flex-direction: column;
     flex: 1;
-    flex-wrap: nowrap;
+    align-items: center;
 }
 
 form div {
@@ -71,6 +70,9 @@ button:hover {
 
 /* ************Items************* */
 
+h1{
+    align-self: flex-start;
+}
 .item {
     justify-content: flex-end;
 }
