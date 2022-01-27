@@ -1,0 +1,83 @@
+/* ************GLOBAL************* */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+/* ************COMBINED ************* */
+
+header, footer, article, aside, nav {
+    padding: 1em;
+}
+
+main, form, .item {
+    display: flex;
+}
+
+header, footer {
+    flex: 1;
+    height: 11vh;
+    background-color: greenyellow;
+}
+
+label, form {
+    width: max-content;
+    background-color: beige;
+}
+
+
+/* ************DESCENDANTS ************* */
+
+main aside, nav {
+    flex: 0 0 20vh;
+}
+
+main aside {
+    background-color: honeydew;
+}
+
+main nav {
+    background-color: gray;
+}
+
+main article {
+    flex: 1;
+    flex-wrap: nowrap;
+}
+
+form div {
+    padding: 1em;
+}
+
+form div div {
+    padding: 0px;
+    font: 14px "Fira Sans", sans-serif;
+}
+
+.item label, input {
+    margin: 3px;
+    padding: 3px;
+}
+
+
+/* ************PSEUDO CLASSES ************* */
+button:hover {
+    outline: 1px solid black;
+}
+
+
+/* ************Items************* */
+
+.item {
+    justify-content: flex-end;
+}
+
+button {
+    border: none;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: darkgrey;
+}
