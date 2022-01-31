@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Based Layout</title>
+    <style>
+        /* combined property */
+        body,
+        #nav,
+        #form {
+            display: grid;
+        }
+
+        #nav,
+        #form {
+            padding: 1em;
+            grid-gap: 1em;
+        }
+
+        /* descendant */
+        .form div input,
+        textarea,
+        button {
+            padding: 0.5em;
+            width: 100%;
+            border: none;
+            outline: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        /* single */
+        body {
+            margin: 0px;
+            grid-template-areas: "nav form";
+            grid-template-columns: 30% 1fr;
+            grid-template-rows: 1fr;
+            /* height: 100vh; */
+        }
+
+        input {
+            height: 40px;
+            font-size: px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #nav {
+            grid-area: nav;
+            grid-template: 30px 5fr/1fr;
+            background-color: rgb(7, 29, 77);
+        }
+
+        #form {
+            grid-area: form;
+            grid-template: repeat(5, max-content)/1fr 1fr;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .span {
+            grid-column: 1/span 2;
+        }
+
+        @media screen and (max-width:575px) {
+            body {
+                grid-template-areas:
+                    "nav"
+                    "form";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 3fr;
+            }
+
+            #form {
+                grid-area: form;
+                display: grid;
+                grid-template: repeat(7, max-content)/1fr;
+                padding: 1em;
+                grid-gap: 1em;
+            }
+
+            .span {
+                grid-column: 1/1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav" class="white">
+        <div class="">
+            <h3>Our contacts</h3>
+        </div>
+        <div class="white">
+            <p>123kamagong St. <br>801212121-11 <br>mail@mail.com</p>
+        </div>
+    </nav>
+    <form id="form" action="">
+        <div class="span">
+            <h3>Send us a message.</h3>
+        </div>
+        <div class="">
+            <label for="yourname">Your name</label><br><input id="yourname" size="" type="text">
+        </div>
+        <div class="">
+            <label for="skype">Skype</label><br><input id="skype" type="text">
+
+        </div>
+        <div class="">
+            <label for="email">Email Address</label><br><input id="email" type="text">
+
+        </div>
+        <div class="">
+            <label for="topic">Topic</label><br><input id="topic" type="text">
+
+        </div>
+        <div class="span">
+            <label for="message">Write yout message</label><br><textarea name="" id="message" cols="30"
+                rows="10"></textarea>
+
+        </div>
+        <div class="span"><button type="submit">Send</button></div>
+    </form>
+</body>
+
+</html>

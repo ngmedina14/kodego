@@ -1,0 +1,300 @@
+body{
+    background-color:darkgrey;
+}
+
+/* ***********DIV Size************ */
+.div0 {
+    height: 50px;
+    width: 50px;
+}
+
+.div1 {
+    height: 100px;
+    width: 100px;
+}
+
+.div2 {
+    height: 100px;
+    width: 150px;
+}
+
+.div3 {
+    height: 150px;
+    width: 100px;
+}
+.div4 {
+    height: 200px;
+    width: 200px;
+}
+.div5 {
+    height: 100px;
+    width: 300px;
+}
+.div6 {
+    height: 300px;
+    width: 100px;
+}
+.div7 {
+    height: 300px;
+    width: 300px;
+}
+
+/* ***********Color************ */
+
+.color1 {
+    background-color: cornflowerblue;
+}
+
+.color2 {
+    background-color: teal;
+}
+
+.color3 {
+    background-color: darkgoldenrod;
+}
+
+.color4 {
+    background-color: blanchedalmond;
+}
+
+.color5 {
+    background-color: skyblue;
+}
+
+.color6 {
+    background-color: crimson;
+}
+
+.color7 {
+    background-color: honeydew;
+}
+
+.color8 {
+    background-color: blueviolet;
+}
+
+/* ***********FONT SIZE************ */
+
+.text-small{
+    font-size: 1em;
+}
+.text-medium{
+    font-size: 2em;
+}
+.text-large{
+    font-size: 3em;
+}
+/* ***********HEIGHT************ */
+
+.height{
+    height: 100%;
+}
+.height-auto{
+    height: auto;
+}
+.height-50-min{
+    min-height: 50px;
+}
+.height-50{
+    height: 50px;
+}
+.height-100{
+    height: 100px;
+}
+.height-150{
+    height: 150px;
+}
+.height-200{
+    height: 200px;
+}
+.height-250{
+    height: 250px;
+}
+.height-300{
+    height: 300px;
+}
+.height-400{
+    height: 400px;
+}
+.height-500{
+    height: 500px;
+}
+
+/* ***********WIDTH************ */
+
+.width{
+    width: 100%;
+}
+.width-auto{
+    width: 100%;
+}
+.width-50-min{
+    min-width: 50px;
+}
+.width-50{
+    width: 50px;
+}
+.width-100{
+    width: 100px;
+}
+.width-150{
+    width: 150px;
+}
+.width-200{
+    width: 200px;
+}
+.width-250{
+    width: 250px;
+}
+.width-300{
+    width: 300px;
+}
+.width-400{
+    width: 400px;
+}
+.width-500{
+    width: 500px;
+}
+
+/* ***********BORDER************ */
+
+.border1-black{
+    border: 1px solid black;
+}
+.border1-white{
+    border: 1px solid white;
+}
+.border1-green{
+    border: 1px solid Green;
+}
+.border1-red{
+    border: 1px solid red;
+}
+.border1-blue{
+    border: 1px solid blue;
+}
+
+/* ***********GRID************ */
+
+
+.grid{
+    display: grid;
+}
+
+/* ***********GRID TEMPLATE ************ */
+
+.grid3x3{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.grid4x4{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+.grid5x5{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+/* ***********GRID GAP************ */
+
+.column-gap-10{
+ grid-column-gap: 10px;
+}
+.row-gap-10{
+    grid-row-gap: 10px;
+}
+.gap-10{
+    grid-gap: 10px;
+}
+
+/* ***********SPAN************ */
+
+/* ShortHand for grid-column-start/grid-column-end */
+/* grid-column:1/5; */
+
+/* ShortHand for grid-row-start/grid-row-end */
+/* grid-row:1/5; */
+
+.grid-column-start1{
+    grid-column-start: 1;
+}
+.grid-column-start2{
+    grid-column-start: 2;
+}
+.grid-column-start3{
+    grid-column-start: 3;
+}
+.grid-column-start4{
+    grid-column-start: 4;
+}
+.grid-column-start5{
+    grid-column-start: 5;
+}
+.grid-column-start6{
+    grid-row-start: 6;
+}
+
+.grid-column-end1{
+    grid-column-end: 1;
+}
+.grid-column-end2{
+    grid-column-end: 2;
+}
+.grid-column-end3{
+    grid-column-end: 3;
+}
+.grid-column-end4{
+    grid-column-end: 4;
+}
+.grid-column-end5{
+    grid-column-end: 5;
+}
+.grid-column-end6{
+    grid-row-end: 6;
+}
+
+.grid-row-start1{
+    grid-row-start: 1;
+}
+.grid-row-start2{
+    grid-row-start: 2;
+}
+.grid-row-start3{
+    grid-row-start: 3;
+}
+.grid-row-start4{
+    grid-row-start: 4;
+}
+.grid-row-start5{
+    grid-row-start: 5;
+}
+.grid-row-start6{
+    grid-row-start: 6;
+}
+
+.grid-row-end1{
+    grid-row-end: 1;
+}
+.grid-row-end2{
+    grid-row-end: 2;
+}
+.grid-row-end3{
+    grid-row-end: 3;
+}
+.grid-row-end4{
+    grid-row-end: 4;
+}
+.grid-row-end5{
+    grid-row-end: 5;
+}
+
+.grid-row-end6{
+    grid-row-end: 6;
+}
+
+/* span */
+
+

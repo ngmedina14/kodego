@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid HolyGrail</title>
+    <style>
+        header,
+        nav,
+        article,
+        aside,
+        footer {
+            background-color: olivedrab;
+            padding: 10px;
+        }
+        
+        body {
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav article aside"
+            "footer footer footer";
+            grid-template-columns: 20% 1fr 20%;
+            grid-template-rows: 13vh 1fr 13vh;
+            grid-gap:5px;
+            height: 100vh;
+            margin:0px
+            
+        }
+        @media screen and (max-width:575px) {
+            body{
+                background-color: pink;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "article"
+                "aside"
+                "footer";
+                grid-template-columns:1fr ;
+                grid-template-rows: 80px 70px 1fr 1fr 80px;
+            }
+        }
+
+        #page-header{
+            grid-area:header;
+        }
+        
+        #main-nav{
+            grid-area: nav;
+        }
+        #main-article{
+            grid-area: article;
+        }
+        #main-aside{
+            grid-area: aside;
+        }
+        #page-footer{
+            grid-area:footer;
+        }
+
+        /* nav,
+        aside {
+            background-color: palegoldenrod;
+        }
+
+        header,
+        footer {
+            grid-column: 1/4;
+            background-color: olivedrab;
+        } */
+    </style>
+</head>
+
+<body>
+    <header id="page-header">Header</header>
+        <nav id="main-nav">Nav</nav>
+        <article id="main-article">Article</article>
+        <aside id="main-aside">Aside</aside>
+    <footer id="page-footer">Footer</footer>
+</body>
+
+</html>
