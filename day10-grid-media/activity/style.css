@@ -1,0 +1,92 @@
+
+body{
+    background-color: beige;
+}
+
+.color1 {
+    background-color: cornflowerblue;
+}
+
+.color2 {
+    background-color: teal;
+}
+
+.color3 {
+    background-color: darkgoldenrod;
+}
+
+.color4 {
+    background-color: blanchedalmond;
+}
+
+.color5 {
+    background-color: skyblue;
+}
+
+.color6 {
+    background-color: crimson;
+}
+
+.color7 {
+    background-color: honeydew;
+}
+
+.color8 {
+    background-color: blueviolet;
+}
+
+/* ***********GRID************ */
+
+
+.grid{
+    display: grid;
+}
+
+/* ***********GRID TEMPLATE ************ */
+
+.grid3x3{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.grid-template-areas-box-3x3{
+    grid-template-areas: 
+    "box1 box2 box2"
+    "box1 box2 box2"
+    "box1 box3 box3";
+}
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+
+/* When the width is between 600px and 900px OR above 1100px */
+/* ipad */
+@media screen and (min-width:810px) {
+    body{
+        background-color: rgb(189, 189, 62);
+    }
+    .grid-template-areas-box-3x3{
+        grid-template-areas: 
+        "box1 box2 box3"
+        "box1 box2 box3"
+        "box1 box2 box3";
+    }
+}
+
+@media screen and (max-width:412px) {
+    body{
+        background-color: rgb(59, 71, 52);
+    }
+    .grid-template-areas-box-3x3{
+        grid-template-areas: 
+        "box1 box1 box1"
+        "box2 box2 box2"
+        "box3 box3 box3";
+    }
+}
