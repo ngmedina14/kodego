@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 10px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.header, .footer {
+    text-align: center;
+}
+
+.box1, .box2, .box3 {
+    padding: 1em;
+    border: 1px solid green;
+}
+
+/* ***********GRID************ */
+
+
+.grid {
+    display: grid;
+}
+
+/* ***********GRID TEMPLATE ************ */
+
+.grid3x3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content max-content 1fr 20px;
+}
+
+.grid-template-areas-box-3x3 {
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "box1 box2 box3"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: olivedrab;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(40, 44, 44);
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.box1 {
+    grid-area: box1;
+
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
+}
+
+/* When the width is between 600px and 900px OR above 1100px */
+/* ipad */
+@media screen and (max-width:810px) {
+    li {
+        display: block;
+        margin: 0px;
+        margin-top: 2em;
+    }
+
+    .grid3x3 {
+        grid-template-columns: max-content repeat(3, 1fr);
+        grid-template-rows: max-content 1fr 20px;
+    }
+
+    .grid-template-areas-box-3x3 {
+        grid-template-areas:
+            "nav header header header"
+            "nav box1 box2 box3"
+            "nav footer footer footer";
+    }
+}
+
+/* smartphone */
+@media screen and (max-width:412px) {
+    li {
+        display: block;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .grid3x3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content 1fr 1fr 1fr max-content;
+    }
+
+    .grid-template-areas-box-3x3 {
+        grid-template-areas:
+            "header"
+            "nav"
+            "box1"
+            "box2"
+            "box3"
+            "footer";
+    }
+}
