@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barangay Management Information System</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+    integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container-fluid bg-cover-image p-0">
+    <div class="page-cover">
+      <header class="page-cover-header bg-light">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="mb-1" src="./media/bamis-logo.svg" alt="" width="30"
+                height="30"><img class="mb-1" src="./media/bamis-icon-blue.png" alt="" width="30" height="30"><img
+                class="mb-1" src="./media/bamis-icon--maastricht-blue.png" alt="" width="30" height="30"><img
+                class="mb-1" src="./media/bamis-icon--grey.png" alt="" width="30" height="30"></a>
+          <a class="nav-link text-muted" href="#">BAMIS</a>
+        </div>
+        </nav>
+      </header>
+      <section class="page-cover-section p-5 d-flex flex-column justify-content-center align-items-center">
+          <div class="position-relative d-flex align-items-center text-nowrap">
+            <div><strong class="fs-1 pe-2">Smart</strong></div>
+            <div id="typewriter-cover"></div>
+          </div>
+          <p class="position-relative text-center text-secondary">Barangay Management Information System</p>
+          <a class="position-relative btn btn-outline-success btn-lg" href="#featured" >Featured Barangay</a>
+      </section>
+      <footer class="page-cover-footer">
+        <!-- <a class="text-decoration-none text-center sticky-top" href="#featured">
+          <div class="bg-light bg-opacity-50 text-center text-nowrap p-2">
+            <i class="bi bi-caret-down-fill text-main me-3"></i>
+            <span class="fs-4 text-muted">Featured Barangay</span>
+            <i class="bi bi-caret-down-fill text-main ms-3"></i>
+          </div>
+        </a> -->
+      </footer>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-2" href="#"><img class="mb-1" src="./media/bamis-logo.svg" alt="" width="30"
+            height="30">BAMIS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
+          aria-controls="navbarToggle" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav d-flex">
+          <a class="nav-link active text-nowrap text-center " aria-current="page" href="#">Home</a>
+          <a class="nav-link text-nowrap text-center" href="#">About</a>
+          <a class="nav-link text-nowrap text-center" href="#">Contact Us</a>
+          <a class="nav-link text-nowrap text-center" href="#">Featured Barangay</a>
+          <a class="nav-link text-nowrap text-center" href="#">Learn More</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div class="bg-secondary" style="height: 100vh;">
+    </div>
+    <div class="bg-success" style="height: 100vh;">
+    </div>
+    <div class="bg-info" id="featured" style="height: 100vh;"></div>
+
+
+
+    <!-- TypeWriter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.18.2/core.js"
+      integrity="sha512-kvRAEzU74MiFnY9BeeLz99N4jCgf6RpN3zNAkwzqysueZQtTbFSyBrfghW+2DLEOs6YiIq+6tKtNi6PyZvAhfA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <script>
+      var app = document.getElementById('typewriter-cover');
+
+      var typewriter = new Typewriter(app, {
+        loop: true
+      });
+
+      typewriter.typeString('<span class="fs-1">Barangay !</span>')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('<span class="fs-1">City !</span> ')
+        .pauseFor(2500)
+        .start();
+    </script>
+
+</body>
+
+</html>
