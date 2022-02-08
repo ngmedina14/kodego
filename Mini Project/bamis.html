@@ -28,17 +28,40 @@
                 height="30"><img class="mb-1" src="./media/bamis-icon-blue.png" alt="" width="30" height="30"><img
                 class="mb-1" src="./media/bamis-icon--maastricht-blue.png" alt="" width="30" height="30"><img
                 class="mb-1" src="./media/bamis-icon--grey.png" alt="" width="30" height="30"></a>
-          <a class="nav-link text-muted" href="#">BAMIS</a>
-        </div>
+            <a class="nav-link text-muted" href="#">BAMIS</a>
+          </div>
         </nav>
       </header>
-      <section class="page-cover-section p-5 d-flex flex-column justify-content-center align-items-center">
+      <section class="page-cover-section p-5 d-flex flex-column justify-content-center align-items-center overflow-hidden">
+        <!-- Version 1
           <div class="position-relative d-flex align-items-center text-nowrap">
             <div><strong class="fs-1 pe-2">Smart</strong></div>
             <div id="typewriter-cover"></div>
           </div>
-          <p class="position-relative text-center text-secondary">Barangay Management Information System</p>
-          <a class="position-relative btn btn-outline-dark btn-lg rounded-pill" href="#featured" ><span class="fs-6 p-2">Featured Barangay</span></a>
+          <p class="position-relative text-center text-secondary">Barangay Management Information System</p> -->
+
+        <!-- Version2 -->
+        <div class="row gx-1">
+          <div class="col-6 text-end fs-1"><strong>Smart</strong></div>
+          <div class="col-6 fs-1 vr"><span>Barangay</span></div>
+          <div class="col-12 text-center"><i class="fs-6">for</i></div>
+          <div class="col-6 text-end fs-1"><strong>Smart</strong></div>
+          <div class="col-6 fs-1 vr"><span>City</span></div>
+        </div>
+        <!-- <div class="text-center"><p class="fs-1 pe-2 lh-1">
+          <strong>Smart</strong> <span>Barangay</span>
+          <br>
+          <i class="fs-6">for</i>
+          <br>
+          <strong>Smart</strong> <span>City</span>
+        </p></div> -->
+
+        <div class="position-relative d-flex align-items-center text-nowrap ">
+          <div id="typewriter-cover"></div>
+        </div>
+
+        <a class="position-relative btn btn-outline-dark btn-lg rounded-pill" href="#featured"><span
+            class="fs-6 p-2">Featured Barangay</span></a>
       </section>
       <footer class="page-cover-footer">
         <!-- <a class="text-decoration-none text-center sticky-top" href="#featured">
@@ -54,7 +77,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand fs-2" href="#"><img class="mb-1" src="./media/bamis-logo.svg" alt="" width="30"
-            height="30">BAMIS</a>
+            height="30" />BAMIS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
           aria-controls="navbarToggle" aria-expanded="true" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -94,14 +117,23 @@
       var app = document.getElementById('typewriter-cover');
 
       var typewriter = new Typewriter(app, {
-        loop: true
+        loop: true,
+        delay:50
       });
+      // Version1
+      // typewriter.typeString('<span class="fs-1">Barangay</span>')
+      //   .pauseFor(1000)
+      //   .deleteAll()
+      //   .typeString('<span class="fs-1">City</span> ')
+      //   .pauseFor(1000)
+      //   .start();
 
-      typewriter.typeString('<span class="fs-1">Barangay !</span>')
-        .pauseFor(1000)
+      // Version2
+      typewriter.typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>BAMIS</strong></span>')
+        .pauseFor(2000)
         .deleteAll()
-        .typeString('<span class="fs-1">City !</span> ')
-        .pauseFor(1000)
+        .typeString('<span class="position-relative text-center text-secondary" >Barangay Management Information System</span>')
+        .pauseFor(2000)
         .start();
     </script>
 
