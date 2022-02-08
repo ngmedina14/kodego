@@ -41,13 +41,16 @@
           <p class="position-relative text-center text-secondary">Barangay Management Information System</p> -->
 
         <!-- Version2 -->
-        <div class="row gx-1">
-          <div class="col-6 text-end fs-1"><strong>Smart</strong></div>
-          <div class="col-6 fs-1 vr"><span>Barangay</span></div>
+        <!-- <div class="row gx-1">
+          <div class="col-6 text-end fs-1"><strong>Smart</strong>
+          <div class="vr"></div>
+          </div>
+          <div class="col-6 fs-1"><span>Barangay</span></div>
           <div class="col-12 text-center"><i class="fs-6">for</i></div>
-          <div class="col-6 text-end fs-1"><strong>Smart</strong></div>
-          <div class="col-6 fs-1 vr"><span>City</span></div>
-        </div>
+          <div class="col-6 text-end fs-1"><strong>Smart</strong>
+          <div class="vr"></div></div>
+          <div class="col-6 fs-1"><span>City</span></div>
+        </div> -->
         <!-- <div class="text-center"><p class="fs-1 pe-2 lh-1">
           <strong>Smart</strong> <span>Barangay</span>
           <br>
@@ -56,12 +59,28 @@
           <strong>Smart</strong> <span>City</span>
         </p></div> -->
 
-        <div class="position-relative d-flex align-items-center text-nowrap ">
+        <!-- <div class="position-relative d-flex align-items-center text-nowrap ">
           <div id="typewriter-cover"></div>
-        </div>
+        </div> -->
 
-        <a class="position-relative btn btn-outline-dark btn-lg rounded-pill" href="#featured"><span
-            class="fs-6 p-2">Featured Barangay</span></a>
+        <!-- Version3 -->
+        <div class="container-fluid">
+          <div class="row bg-light">
+            <div class="col-7 d-flex justify-content-end align-items-center " style="font-size:4em;"><div id="typewriter-cover"></div></div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-12 fs-2">Barangay</div>
+                <div class="col-12 fs-6">for</div>
+                <div class="col-12 fs-2">City</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="position-relative text-center text-secondary">Barangay Management Information System</p>
+
+        <a class="position-relative btn btn-green-moon btn-lg rounded-pill shadow" href="#featured"><span
+            class="fs-6 p-2 text-white">Featured Barangay</span></a>
       </section>
       <footer class="page-cover-footer">
         <!-- <a class="text-decoration-none text-center sticky-top" href="#featured">
@@ -129,10 +148,18 @@
       //   .start();
 
       // Version2
+      // typewriter.typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>BAMIS</strong></span>')
+      //   .pauseFor(2000)
+      //   .deleteAll()
+      //   .typeString('<span class="position-relative text-center text-secondary" >Barangay Management Information System</span>')
+      //   .pauseFor(2000)
+      //   .start();
+
+      // Version3
       typewriter.typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>BAMIS</strong></span>')
         .pauseFor(2000)
         .deleteAll()
-        .typeString('<span class="position-relative text-center text-secondary" >Barangay Management Information System</span>')
+        .typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>SMART</strong></span>')
         .pauseFor(2000)
         .start();
     </script>
