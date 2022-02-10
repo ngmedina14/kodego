@@ -32,7 +32,8 @@
           </div>
         </nav>
       </header>
-      <section class="page-cover-section p-5 d-flex flex-column justify-content-center align-items-center overflow-hidden">
+      <section
+        class="page-cover-section p-5 d-flex flex-column justify-content-center align-items-center overflow-hidden">
 
         <!-- Version3 -->
         <div class="container-fluid">
@@ -49,11 +50,11 @@
             </div>
           </div>
         </div>
-        
+
         <p class="position-relative text-center text-secondary text-nowrap">Barangay Management Information System</p>
 
         <a class="position-relative btn btn-green-moon btn-lg rounded-pill shadow" href="#magazine"><span
-            class="fs-6 p-2 text-white">Barangay Magazine</span></a>
+            class="fs-6 p-2 text-white text-nowrap">Barangay Magazine</span></a>
       </section>
       <footer class="page-cover-footer p-4 bg-dark">
         <!-- <a class="text-decoration-none text-center sticky-top" href="#magazine">
@@ -78,20 +79,604 @@
       <div class="collapse navbar-collapse" id="navbarToggle">
         <div class="navbar-nav d-flex">
           <a class="nav-link active text-nowrap text-center " aria-current="page" href="#">Home</a>
-          <a class="nav-link text-nowrap text-center" href="#">About</a>
-          <a class="nav-link text-nowrap text-center" href="#">Contact Us</a>
           <a class="nav-link text-nowrap text-center" href="#">Barangay Magazine</a>
+          <a class="nav-link text-nowrap text-center" href="#">About</a>
+          <a class="nav-link text-nowrap text-center" href="#">Contact</a>
           <a class="nav-link text-nowrap text-center" href="#">Learn More</a>
         </div>
       </div>
     </nav>
 
     <!-- content -->
-    <div class="bg-secondary" style="height: 100vh;">
+    <div class="bg-light container-md" id="magazine">
+      <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active" aria-current="true"></li>
+          <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1" class=""></li>
+          <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2" class=""></li>
+        </ol>
+
+        <!-- HOME -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./media/digitization.jpeg" class="d-block w-100" alt="Slide 1" style="max-height: 60vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="./media/digitization.jpeg" class="d-block w-100" alt="Slide 2" style="max-height: 60vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="./media/digitization.jpeg" class="d-block w-100" alt="Slide 3" style="max-height: 60vh;">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+
+      <!-- MAGAZINE -->
+      <h1 class="fs-1 text-center p-3 d-flex justify-content-center align-items-end">
+        <div class="vr mb-4 me-4 pb-1">Barangay</div> Magazine
+      </h1>
+      <nav class="nav nav-pills nav-fill nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-all" role="tab"
+          aria-controls="nav-all" aria-selected="true">All</a>
+        <a class="nav-link" id="nav-government-tab" data-bs-toggle="tab" href="#nav-government" role="tab"
+          aria-controls="nav-government" aria-selected="false">Government</a>
+        <a class="nav-link" id="nav-event-tab" data-bs-toggle="tab" href="#nav-event" role="tab"
+          aria-controls="nav-event" aria-selected="false">Events</a>
+        <a class="nav-link" id="nav-business-tab" data-bs-toggle="tab" href="#nav-business" role="tab"
+          aria-controls="nav-business" aria-selected="false">Business</a>
+        <a class="nav-link" id="nav-culture-tab" data-bs-toggle="tab" href="#nav-culture" role="tab"
+          aria-controls="nav-culture" aria-selected="false">Culture</a>
+
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <!-- ALL -->
+        <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_suburbs_-8-b83.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_city_driver_re_0x5e.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_city_girl_ccpd.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_drone_delivery_re_in95.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- GOVERNMENT -->
+        <div class="tab-pane fade" id="nav-government" role="tabpanel" aria-labelledby="nav-government-tab">
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_voting_nvu7.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_business_plan_re_0v81.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_schedule_re_2vro.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_city_life_gnpr.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- EVENT -->
+        <div class="tab-pane fade" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_festivities_tvvj.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_special_event_-4-aj8.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_amusement_park_17oe.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_weather_re_qsmd.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- BUSINESS -->
+        <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="nav-business-tab">
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_building_re_xfcm.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_career_progress_ivdb.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_house_searching_re_stk8.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_programming_re_kg9v.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- CULTURE -->
+        <div class="tab-pane fade" id="nav-culture" role="tabpanel" aria-labelledby="nav-culture-tab">
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_eco_conscious_re_r2bs.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_season_change_f99v.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_missed_chances_k-3-cq.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="text-decoration-none text-dark">
+              <div class="row g-0">
+                <div class="col-12 col-sm-4">
+                  <img src="./media/illustration/undraw_working_late_re_0c3y.svg" class="img-fluid w-100"
+                    alt="card-horizontal-image">
+                </div>
+                <div class="col-12 col-sm-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="card-text">This is a wider card with supporting text below as a natural
+                      lead-in to additional content.</span>
+                    <ul class="list-unstyled d-flex justify-content-between m-0 p-0">
+                      <li>
+                        <small class="text-muted text-end">Last updated 3 mins ago</small>
+                      </li>
+                      <li>
+                        <strong class="text-muted text-end">- Author Name</strong>
+                      </li>
+                    </ul>
+                    <small class="text-muted fst-italic d-flex justify-content-end">Luzon, Batangas, Alangilan</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="bg-success" style="height: 100vh;">
+    <!-- <div class="bg-success" style="height: 100vh;">
+      
     </div>
-    <div class="bg-info" id="magazine" style="height: 100vh;"></div>
+    <div class="bg-info" id="magazine" style="height: 100vh;"></div> -->
 
 
 
@@ -110,24 +695,8 @@
 
       var typewriter = new Typewriter(app, {
         loop: true,
-        delay:50
+        delay: 50
       });
-      // Version1
-      // typewriter.typeString('<span class="fs-1">Barangay</span>')
-      //   .pauseFor(1000)
-      //   .deleteAll()
-      //   .typeString('<span class="fs-1">City</span> ')
-      //   .pauseFor(1000)
-      //   .start();
-
-      // Version2
-      // typewriter.typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>BAMIS</strong></span>')
-      //   .pauseFor(2000)
-      //   .deleteAll()
-      //   .typeString('<span class="position-relative text-center text-secondary" >Barangay Management Information System</span>')
-      //   .pauseFor(2000)
-      //   .start();
-
       // Version3
       typewriter.typeString('<span class="position-relative text-center text-secondary" style="letter-spacing: 2px;"><strong>SMART</strong></span>')
         .pauseFor(2000)

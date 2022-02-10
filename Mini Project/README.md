@@ -68,4 +68,10 @@ https://undraw.co/illustrations
 
 https://www.manypixels.co/gallery
 
+https://www.videvo.net/
+
 https://screenlane.com/screens/all/elements/audio-player/
+
+https://blush.design/api/download?shareUri=NwqWrdR1rDvKHGgR&c=Bottom_0%7E393f82-0.1%7E393f82-0.2%7E89c5cc-0.3%7E89c5cc_Hair_0%7Ee8e1e1-0.1%7E4a312c-0.2%7Eb58143-0.3%7E181658_Skin_0%7Eeac7a8-0.1%7Ed4a181-0.2%7Eeac7a8-0.3%7Eeac7a8_Top_0%7Ef2f2f2-0.1%7E43d26c-0.2%7Ef2f2f2-0.3%7Effa434&w=800&h=800&fm=png
+
+https://blush.design/api/download?shareUri=UL5haLC1RO2TkYVx&c=Bottom_0%7E2b44ff-0.1%7E2b44ff-0.2%7E393f82_Hair_0%7E4a312c-0.1%7Ee8e1e1-0.2%7E2c1b18_Skin_0%7Eb28b67-0.1%7Eeac7a8-0.2%7Ed4a181_Top_0%7Ef2f2f2-0.1%7Ef2f2f2-0.2%7E43d26c&w=800&h=800&fm=png
