@@ -1,0 +1,37 @@
+@import "../typefaces/typefaces.css"
+
+$bamis-primary: #18B984
+$bamis-font-main: 'Gilroy', sans-serif
+$bamis-font-secondary: 'Secondary Font', serif
+
+\:root 
+    --font-main: #{$bamis-font-main}
+    --font-secondary: #{$bamis-font-secondary}
+
+*
+    font-family: var(--font-main)
+
+
+.nav-active
+    &:hover
+        color: $bamis-primary
+    
+.title
+
+%toolbelt
+  box-sizing: border-box
+  border-top: 1px rgba(#000, .12) solid
+  padding: 16px 0
+  width: 100%
+
+  &:hover
+    border: 2px rgba(#000, .5) solid
+
+.action-buttons
+  @extend %toolbelt
+  color: #4285f4
+
+
+.reset-buttons
+  @extend %toolbelt
+  color: #cddc39

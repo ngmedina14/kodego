@@ -1,0 +1,33 @@
+@import url(/home/neil/go/src/github.com/ngmedina14/kodego/mini-project1/assets/typefaces/typefaces.css);
+:root {
+  --font-main: Gilroy, sans-serif;
+  --font-secondary: Secondary Font, serif;
+}
+
+* {
+  font-family: var(--font-main);
+}
+
+.nav-active:hover {
+  color: #18B984;
+}
+
+.action-buttons, .reset-buttons {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.action-buttons:hover, .reset-buttons:hover {
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+}
+
+.action-buttons {
+  color: #4285f4;
+}
+
+.reset-buttons {
+  color: #cddc39;
+}
