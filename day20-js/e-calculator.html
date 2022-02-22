@@ -140,7 +140,11 @@
                     if (display.textContent.length > 14) {
                         return;
                     }
-                    (flag) ? display.textContent = input : display.textContent += input;
+                    if (flag) {
+                        display.textContent = input;flag=false;
+                    } else{
+                        display.textContent += input;
+                    }
                     break;
                 case "dot":
                     let value = display.textContent;
