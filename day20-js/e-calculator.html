@@ -137,12 +137,12 @@
                 case "7":
                 case "8":
                 case "9":
-                    if (display.textContent.length > 14) {
-                        return;
-                    }
                     if (flag) {
                         display.textContent = input;flag=false;
                     } else{
+                        if (display.textContent.length > 14) {
+                        return;
+                        }
                         display.textContent += input;
                     }
                     break;
