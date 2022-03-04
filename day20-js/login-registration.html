@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Registration</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login Registration</h2>
+        <form id="register">
+            <label for="e-mail">Email</label>
+            <input type="email" id="e-mail" name="e-mail" aria-describedby="e-mail-validation" placeholder="Email"
+                autocomplete="off" required />
+            <span id="e-mail-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required aria-describedby="username-validation"
+                placeholder="Username" minlength="8" maxlength="16" autocomplete="off" />
+            <span id="username-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required aria-describedby="password-validation"
+                placeholder="Password" minlength="6" autocomplete="off" />
+            <span id="password-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required
+                aria-describedby="confirm-password-validation" placeholder="Confirm Password" minlength="8"
+                autocomplete="off" />
+            <span id="confirm-password-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <button type="submit" id="sign-up" name="submit"> Submit </button>
+        </form>
+        <script>
+            let email = document.getElementById('e-mail');
+            let username = document.getElementById('username');
+            let password = document.getElementById('password');
+            let confirmPassword = document.getElementById('confirm-password');
+            let signUp = document.getElementById('sign-up');
+            let registerForm = document.getElementById('register');
+            let fields = document.querySelectorAll("#register > input,select");
+
+            [...fields].map((field) => {
+                field.onblur = (event) => {
+                    // check if the value is valid
+                    const isValid = event.target.validity.valid;
+
+                    // get the element id
+                    let targetPlaceholder = event.target.getAttribute('placeholder');
+
+                    // get the value from the input
+                    var targetValue = event.target.value;
+
+                    // get the validation message from the specific input
+                    let message = event.target.validationMessage;
+
+                    // get the value of aria-describedby : the value of this is the same as the id of the error element
+                    const connectedValidationId = event.target.getAttribute('aria-describedby');
+
+                    //check if the connectedValidationId has value if empty return false if true get the element
+                    const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
+
+
+                    if (connectedValidation && message && !isValid || targetValue == 0) {
+                        (!targetValue)? message = `${targetPlaceholder} field is required.`:message
+                        connectedValidation.textContent = message;
+                    } else {
+                        connectedValidation.textContent = '';
+                    }
+                };
+            });
+
+
+            signUp.onsubmit = () => {
+                [...fields].map((event) => {
+                    // check if the value is valid
+                    const isValid = event.target.validity.valid;
+
+                    // get the element id
+                    let targetPlaceholder = event.target.getAttribute('placeholder');
+
+                    // get the value from the input
+                    var targetValue = event.target.value;
+
+                    // get the validation message from the specific input
+                    let message = event.target.validationMessage;
+
+                    // get the value of aria-describedby : the value of this is the same as the id of the error element
+                    const connectedValidationId = event.target.getAttribute('aria-describedby');
+
+                    //check if the connectedValidationId has value if empty return false if true get the element
+                    const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
+
+
+                    if (connectedValidation && message && !isValid || targetValue == 0) {
+                        (!targetValue)? message = `${targetPlaceholder} field is required.`:message
+                        connectedValidation.textContent = message;
+                    } else {
+                        connectedValidation.textContent = '';
+                    }
+            });
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

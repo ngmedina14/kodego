@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Sqrt</title>
+    <style>
+        h1{
+            display: inline-block;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1><a onclick="getSqrt(this)" id="1">1</a></h1>
+    <h1><a onclick="getSqrt(this)" id="2">2</a></h1>
+    <h1><a onclick="getSqrt(this)" id="3">3</a></h1>
+    <h1><a onclick="getSqrt(this)" id="4">4</a></h1>
+    <h1><a onclick="getSqrt(this)" id="5">5</a></h1>
+    <h1><a onclick="getSqrt(this)" id="6">6</a></h1>
+    <br>
+    <h1><a onclick="getSqrt(this)" id="7">7</a></h1>
+    <h1><a onclick="getSqrt(this)" id="8">8</a></h1>
+    <h1><a onclick="getSqrt(this)" id="9">9</a></h1>
+    <h1><a onclick="getSqrt(this)" id="10">10</a></h1>
+    <h1><a onclick="getSqrt(this)" id="11">11</a></h1>
+    <h1><a onclick="getSqrt(this)" id="12">12</a></h1>
+
+    <script>
+        function getSqrt(obj){
+            let t = obj.innerText;
+            let attr = obj.id;
+            alert(`ID = ${attr} : ${parseFloat(Math.sqrt(Number(t))).toFixed(2)} SQRT of ${t}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        #display1 {
+            color: olive;
+        }
+
+        #display2 {
+            color: cornflowerblue;
+        }
+
+        #display3 {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form > -->
+    <label for=""></label>
+    <select name="" id="myselect" multiple>
+        <option value="1">React</option>
+        <option value="2">Vue</option>
+        <option value="3">Angular</option>
+        <option value="4">Ember</option>
+    </select>
+    <h2>Get Selected</h2>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <button id="btn1">getElementById</button>
+    <button id="btn2">querySelectorAll</button>
+    <button id="btn3">filter and map</button>
+
+    <br><br><br>
+
+    <input type="checkbox" name="sAll" id="sAll" onclick="selectAll(this)"><label for="">Select All</label>
+    <input type="checkbox" name="cbox" value="red"><label for="">red</label>
+    <input type="checkbox" name="cbox" value="blue"><label for="">blue</label>
+    <input type="checkbox" name="cbox" value="green"><label for="">green</label>
+    <input type="checkbox" name="cbox" value="violet"><label for="">violet</label>
+    <input type="checkbox" name="cbox" value="yellow"><label for="">yellow</label>
+    <button onclick="btnSA()">button</button>
+    <!-- </form> -->
+
+    <script>
+
+        // GET SELECTED
+        //using getElementById
+        let btn1 = document.getElementById("btn1");
+        let dropdown = document.getElementById("myselect");
+        btn1.onclick = () => {
+            console.log(dropdown.selectedOptions)
+            let mapSelectedOptions = [...dropdown.selectedOptions].map(option => option.text)
+            document.getElementById("display1").textContent = `${mapSelectedOptions}`
+        }
+
+        // GET SELECTED
+        // using querySelectorAll
+        let btn2 = document.getElementById("btn2");
+        btn2.onclick = () => {
+            let checkedItems = document.querySelectorAll("#myselect :checked");
+            console.log(checkedItems)
+            let mapQueryAll = [...checkedItems].map(option => option.text)
+            document.getElementById("display2").textContent = `${mapQueryAll}`
+        }
+
+        // GET SELECTED
+        // using filter
+        let btn3 = document.getElementById("btn3");
+        btn3.onclick = () => {
+            console.log(dropdown.options)
+            let filterMap = [...dropdown.options].filter(options => options.selected).map(option => option.text)
+            document.getElementById("display3").textContent = `${filterMap}`
+        }
+
+        function selectAll(box){
+            let cboxs = document.getElementsByName("cbox");
+           for (let i=0; i < cboxs.length;i++){
+                cboxs[i].checked = box.checked
+           }
+        }
+        function btnSA(box){
+            let cboxs = document.getElementsByName("cbox");
+            let toggle = Array(...cboxs).filter(i => i.checked==true)
+            Array(...cboxs).map((cbox,i)=>(toggle.length == cboxs.length)?cboxs[i].checked=false:cboxs[i].checked=true)
+        }
+
+    </script>
+</body>
+
+</html>

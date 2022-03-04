@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM CSS</title>
+    <style>
+        .theme {
+            background-color: beige;
+            font-size: medium;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: cadetblue;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1">
+        <label for=""> Value 1</label>
+        <input type="text" id="value1">
+        <label for=""> Value 2</label>
+        <input type="text" id="value2">
+
+    </form>
+    <button id="btn">Do it!</button>
+    <button onclick="Interactive()">Interactive</button>
+    <p id="result"></p>
+
+    <br><br><br>
+    <button id="btn-toggle">toggle</button>
+    <div id="container" hidden>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis fugiat dolorum voluptatum,
+        harum sapiente ullam nihil. Reiciendis nisi quis consectetur quo,
+        commodi culpa assumenda corrupti nemo, non modi architecto.
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", () => { getSum(); })
+
+        function getSum() {
+            let num1 = Number(document.getElementById("value1").value);
+            let num2 = Number(document.getElementById("value2").value);
+            let result = num1 + num2;
+            document.getElementById("result").textContent = result;
+            document.getElementById("result").style.color = "red";
+        }
+
+        let calculator = {
+            sum() {
+                return this.a + this.b
+            },
+            multiply() {
+                return this.a * this.b
+            },
+            inputNum() {
+                this.a = +prompt("Enter First Value");
+                this.b = +prompt("Enter Second Value")
+            }
+        }
+        function Interactive() {
+            calculator.inputNum();
+            alert(calculator.sum());
+            alert(calculator.multiply());
+        }
+
+
+        let btntgl = document.getElementById("btn-toggle");
+        let container = document.getElementById("container");
+        btntgl.addEventListener("click", () => {
+            container.classList.toggle("theme")
+            document.body.style.backgroundColor = "olive";
+        })
+
+        document.getElementById("value1").onkeypress = (e) => {
+            if (e.which === 32) {
+                container.classList.toggle("theme")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

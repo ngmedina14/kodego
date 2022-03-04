@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+
+    <form id="movies">
+        <label for="movie-id">Id</label>
+        <input id="movie-id" type="text">
+        <br>
+        <label for="movie-title">Title</label>
+        <input id="movie-title" type="text">
+        <br>
+        <label for="movie-year">Year</label>
+        <input id="movie-year" type="text">
+        <br>
+        <label for="movie-review">Review</label>
+        <input id="movie-review" type="text">
+    </form>
+    <button id="add">add data</button>
+    <button id="get">get data</button>
+    <button id="clear">clear</button>
+
+    
+
+
+    <script>
+        let add = document.getElementById('add')
+        let get = document.getElementById('get')
+        let clear = document.getElementById('clear')
+
+        let data = document.forms.movies;
+        let item = new Object();
+        
+        console.log(data[0].value);
+        let movies = []
+
+
+
+        add.onclick = ()=>{
+            moviesR = retrieveData('moviesReview')
+            data = document.forms.movies;
+            [...data].map((data)=>item[data.id]=data.value)
+            moviesR.push(item)
+            sessionStorage.setItem('moviesReview',JSON.stringify(moviesR));
+            data.reset()
+        }
+
+
+        get.onclick = ()=>{
+            arr = retrieveData('moviesReview');
+            console.log(arr);
+        }
+
+        function retrieveData(data){
+            dataArray = JSON.parse(sessionStorage.getItem(data));
+            return dataArray
+        }
+
+        clear.onclick = ()=>{
+            // clears the sessionStorage item
+            sessionStorage.removeItem('moviesReview');
+        }
+
+        
+    </script>
+</body>
+</html>

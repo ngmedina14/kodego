@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calcu</title>
+</head>
+<body>
+    <h1>im a calculator</h1>
+    <button onclick="Calcu()">click me!</button>
+    <script>
+        function Calcu(){
+        let val1 = prompt("Enter the numba 1");
+        let val2 = prompt("Enter the numba 2");
+        let x = prompt("Enter the operator : + - * /");
+        
+        switch(x){
+            case "+":
+                result = val1 + val2
+                alert(`val1 + val2 = ${result}`)
+                break;
+            case "-":
+                result = val1 - val2
+                alert(`val1 - val2 = ${result}`)
+                break;
+            case "*":
+                result = val1 * val2
+                alert(`val1 * val2 = ${result}`)
+                break;
+            case "/":
+                result = val1 / val2
+                alert(`val1 / val2 = ${result}`)
+                break;
+            case "%":
+                result = val1 % val2
+                alert(`val1 % val2 = ${result}`)
+                break;            
+            case "**":
+                result = val1 ** val2
+                alert(`val1 ** val2 = ${result}`)
+                break;
+            default:
+                alert("Emotional Damage!")
+                document.write("Something went wrong! its you!")
+        }
+        
+        }
+
+    </script>
+</body>
+</html>

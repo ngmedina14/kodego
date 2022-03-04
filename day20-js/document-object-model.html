@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>DOM EXAMPLES</h1>
+    <div id="demo">
+        <p id="child1">im a child1</p>
+        <p id="child2">im a child2</p>
+    </div>
+
+    <script>
+        // object Literal
+        let person = {fName:"Neil",mName:"Gutierrez",fName:"Medina",fullName:`${this.fName} ${this.mName}. ${this.lName}`}
+
+        // object Instance
+        let employee = new Object()
+        employee.fName = "Kae-Anne"
+        employee.mName = "Cueto"
+        employee.lName = "Malinao"
+        employee.interest = ["Reading","Praying","Instrument"]
+
+        // object Constructor
+        function customer(fName,mName,lName){ 
+            this.fName=fName;
+            this.mName=mName;
+            this.lName=lName;
+            this.fullName = `${this.fName} ${this.mName.charAt(0).toUpperCase()}. ${this.lName}`
+            this.interest = ["Reading","Playing","Singing"]
+            this.bio = function(){
+                let likes = ""
+                if (this.interest.length >1){
+                    likes += "s "
+                    this.interest.sort().reverse()
+                    this.interest.map((element,index)=> (index == this.interest.length-1) ? likes+="and "+element : likes+=element+", ")
+                } else {
+                    likes += " " +this.interest
+                }
+                alert(`${this.fullName} like${likes}.`)
+            }
+        }
+        let customer1 = new customer("Charlotte","Atienza","Argente");
+        customer1.bio()
+
+        function DocumentMethod(method,id,tag,text){
+
+            switch (method){
+                case "create":
+                    console.log(method)
+                    var newTag = document.createElement(tag);
+                    var newText = document.createTextNode(text);
+                    newTag.appendChild(newText);
+                    var nodeParent = document.getElementById(id);
+                    nodeParent.appendChild(newTag);
+                break;
+                case "replace":
+                    console.log(method)
+                    var newTag = document.createElement(tag);
+                    var newText = document.createTextNode(text);
+                    newTag.appendChild(newText)
+                    var nodeParent = document.getElementById(id);
+                    var firstNode = nodeParent.firstElementChild;
+                    nodeParent.replaceChild(newTag,firstNode);
+                break;
+                case "remove": 
+                    console.log(method)
+                    var nodeParent = document.getElementById(id);
+                    let children = nodeParent.childNodes
+                    var secondNode = nodeParent.children[1];
+                    nodeParent.removeChild(secondNode)
+                break;
+            }
+        }
+
+        DocumentMethod("create","demo","p","Create Text")
+        DocumentMethod("replace","demo","p","Replaced Text")
+        DocumentMethod("remove","demo","","")
+
+    </script>
+</body>
+</html>
