@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/forms.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login localstorage is caching ?</h2>
+        <form id="login">
+            <label for="username">Username <span class="asterisk">*</span></label>
+            <input type="text" id="username" name="username" required aria-describedby="username-validation"
+                placeholder="Username" minlength="4" maxlength="16" autocomplete="off" />
+            <span id="username-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="password">Password <span class="asterisk">*</span></label>
+            <input type="password" id="password" name="password" required aria-describedby="password-validation"
+                placeholder="Password" minlength="4" autocomplete="off" />
+            <span id="password-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <button id="sign-in"> Login </button>
+            <a href="./register.html">register</a>
+        </form>
+        <p id="toast"></p>
+        <script src="./asset/js/common.js"></script>
+        <script src="./asset/js/form.js"></script>
+        <script>
+            let username = document.getElementById('username');
+            let password = document.getElementById('password');
+            let signIn = document.getElementById('sign-in');
+
+            signIn.onclick = (e) => {
+                e.preventDefault();
+                let users = retrieveSessionData('users')
+                if (users.length == 0) {
+                    toast('Register first.', 'red');
+                } else {
+                    users.map((user) => {
+                        if (user[0][1] == username.value && user[1][1] == password.value) {
+                            sessionStorage.setItem('user-session', user[0][1]);
+                            window.location.href = 'new-record.html';
+                        } else {
+                            toast('Invalid login.', 'red');
+                        }
+                    });
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

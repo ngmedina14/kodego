@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/forms.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="users" enctype="multipart/form-data">
+            <label for="username">Username <span class="asterisk">*</span></label>
+            <input type="text" id="username" name="username" required aria-describedby="username-validation"
+                placeholder="Username" minlength="4" maxlength="16" autocomplete="off" />
+            <span id="username-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="password">Password <span class="asterisk">*</span></label>
+            <input type="password" id="password" name="password" required aria-describedby="password-validation"
+                placeholder="Password" minlength="4" autocomplete="off" />
+            <span id="password-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <button id="save"> Register </button>
+            <input type="reset">
+            <a href="./login.html">login</a>
+        </form>
+        <p id="toast"></p>
+        <script src="./asset/js/common.js"></script>
+        <script src="./asset/js/form.js"></script>
+        <script>
+            let save = document.getElementById('save');
+            let fields = document.querySelectorAll("#register > input,select");
+            validateFormFields(fields)
+
+            save.onclick = function Save(e) {
+                e.preventDefault();
+                console.log("admin");
+                let users = retrieveSessionData('users')
+                if (users.length == 0) {
+                    if (appendSessionFormData('users')) {
+                        toast('Saved.', 'green');
+                    }
+                } else {
+                    users.map((user) => {
+                        if (user.username == username.value) {
+                            toast('Username already taken.', 'red');
+                        } else {
+                            if (appendSessionFormData('users')) {
+                                toast('Saved.', 'green');
+                            }
+                        }
+                    });
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.asterisk, .error{
+    color: red;
+}
+
+#toast{
+    visibility: collapse;
+}

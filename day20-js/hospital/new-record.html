@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/forms.css">
+</head>
+
+<body>
+    <h2>New Patient</h2>
+    <form id="patients">
+        <label for="first-name">First Name <span class="asterisk">*</span></label>
+        <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-validation"
+            placeholder="First Name" minlength="4" maxlength="16" autocomplete="off" />
+        <span id="first-name-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="middle-name">Middle Name <span class="asterisk">*</span></label>
+        <input type="text" id="middle-name" name="middle-name" required aria-describedby="middle-name-validation"
+            placeholder="Middle Name" minlength="4" maxlength="16" autocomplete="off" />
+        <span id="middle-name-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="address">Address <span class="asterisk">*</span></label>
+        <input type="text" id="address" name="address" required aria-describedby="address-validation"
+            placeholder="Address" minlength="4" maxlength="16" autocomplete="off" />
+        <span id="address-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="birthdate">Birthdate <span class="asterisk">*</span></label>
+        <input type="date" id="birthdate" name="birthdate" required aria-describedby="birthdate-validation"
+            placeholder="Birthdate" minlength="4" maxlength="16" autocomplete="off" />
+        <span id="birthdate-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="contact-number">Contact Number <span class="asterisk">*</span></label>
+        <input type="text" id="contact-number" name="contact-number" required pattern="^[0-9]{11}"
+            aria-describedby="contact-number-validation" placeholder="Contact Number" minlength="4" maxlength="16"
+            autocomplete="off" />
+        <span id="contact-number-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="male">Gender <span class="asterisk">*</span></label>
+        <input type="radio" id="male" name="gender" required aria-describedby="gender-validation" placeholder="Gender"
+            minlength="4" maxlength="16" autocomplete="off" checked />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" required aria-describedby="gender-validation" placeholder="gender"
+            minlength="4" maxlength="16" autocomplete="off" />
+        <label for="female">Female</label>
+        <span id="gender-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+
+        <p>Medical History</p>
+
+        <input type="checkbox" id="asthma" value="1" name="medical-history" />
+        <label for="asthma">Asthma</label>
+        <br>
+
+        <input type="checkbox" id="cancer" value="2" name="medical-history" />
+        <label for="cancer">Cancer</label>
+        <br>
+
+        <input type="checkbox" id="cardiac-disease" value="3" name="medical-history" />
+        <label for="cardiac-disease">Cardiac Disease</label>
+        <br>
+
+        <input type="checkbox" id="diabetes" value="4" name="medical-history" />
+        <label for="diabetes">Diabetes</label>
+        <br>
+
+        <input type="checkbox" id="hypertension" value="5" name="medical-history" />
+        <label for="hypertension">Hypertension</label>
+        <br>
+
+        <input type="checkbox" id="psychiatric-disorder" value="6" name="medical-history" />
+        <label for="psychiatric-disorder">Psychiatric Disorder</label>
+        <br>
+
+        <input type="checkbox" id="epilepsy" value="7" name="medical-history" />
+        <label for="epilepsy">Epilepsy</label>
+        <br>
+
+        <input type="checkbox" id="others" value="8" name="medical-history" />
+        <label for="others">Others</label>
+        <br>
+        <label for="current-symptoms">Current Symptoms</label>
+        <select type="text" id="current-symptoms" name="current-symptoms" multiple>
+            <option value="1">Chest Pain</option>
+            <option value="2">Respitory</option>
+            <option value="3">Hematological</option>
+            <option value="4">Lymphatic</option>
+            <option value="5">Neurological</option>
+            <option value="6">Psychiatric</option>
+            <option value="7">Gastrointestinal</option>
+            <option value="8">Weight</option>
+        </select>
+        <br>
+        <p>Are you currently taking medication? </p>
+        <input type="radio" id="yes" value="1" name="yes-no" />
+        <label for="yes">Yes</label>
+        <br>
+        <input type="radio" id="no" value="0" name="yes-no" checked />
+        <label for="no">No</label>
+        <br>
+        <input type="text" id="medication" name="medication" disabled />
+        <span id="medication-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <br>
+
+        <button id="save"> Save </button>
+        <input type="reset">
+    </form>
+        <br>
+        <button id="logout"></button>
+        <p id="toast"></p>
+    <script src="./asset/js/common.js"></script>
+    <script src="./asset/js/form.js"></script>
+    <script>
+        let question = document.getElementsByName('yes-no');
+        let fields = document.querySelectorAll("#patients > input,select");
+        validateFormFields(fields);
+
+        
+        window.onload = ()=>{
+        // Login Session
+        let session = sessionStorage.getItem('user-session');
+        logout.textContent = `Logout ${session.charAt(0).toUpperCase() + session.slice(1)}`
+        };
+
+        logout.onclick = () => {
+            sessionStorage.removeItem('user-session')
+            window.location.href = 'login.html';
+        }
+
+        // medication field
+        [...question].map((radio) => {
+            radio.oninput = () => {
+                let medication = document.getElementById('medication');
+                (radio.value == 1) ? medication.removeAttribute('disabled') : medication.setAttribute('disabled', null);
+            }
+        });
+
+        // Save Patient
+        save.onclick = function Save(e) {
+            e.preventDefault();
+            if (appendSessionFormData('patients')){
+                let toast = document.getElementById('toast');
+                toast.style.visibility = "visible";
+                toast.textContent = "Saved.";
+                toast.style.color = "green"
+            }
+
+            
+        }
+
+    </script>
+</body>
+
+</html>
