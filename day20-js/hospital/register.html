@@ -60,8 +60,10 @@
                 console.log("admin");
                 let users = retrieveSessionData('users')
                 if (users.length == 0) {
-                    if (appendSessionFormData('users')) {
-                        toast('Saved.', 'green');
+                    if (validateFormFields(fields)) {
+                        if (appendSessionFormData('users')) {
+                            toast('Saved.', 'green');
+                        }
                     }
                 } else {
                     users.map((user) => {
