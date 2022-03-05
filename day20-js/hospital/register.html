@@ -55,9 +55,8 @@
             let fields = document.querySelectorAll("#users > input,select");
             promptValidation(fields)
 
-            save.onclick = function Save(e) {
+            save.onclick = function (e) {
                 e.preventDefault();
-                console.log("admin");
                 let users = retrieveSessionData('users')
                 if (users.length == 0) {
                     if (validateFormFields(fields)) {
@@ -66,17 +65,16 @@
                         }
                     }
                 } else {
-                    users.map((user) => {
-                        if (user.username == username.value) {
-                            toast('Username already taken.', 'red');
-                        } else {
-                            if (validateFormFields(fields)) {
-                                if (appendSessionFormData('users')) {
-                                    toast('Saved.', 'green');
-                                }
+                    isvalid = users.map((user) => (user[0][1] == username.value) ? true : false).includes(true);
+                    if (isvalid) {
+                        toast('Username already taken.', 'red');
+                    } else {
+                        if (validateFormFields(fields)) {
+                            if (appendSessionFormData('users')) {
+                                toast('Saved.', 'green');
                             }
                         }
-                    });
+                    }
                 }
             }
         </script>

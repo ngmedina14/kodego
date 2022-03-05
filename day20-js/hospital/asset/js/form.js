@@ -26,10 +26,10 @@ function promptValidation(formFields) {
             //check if the connectedValidationId has value if empty return false if true get the element
             const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
 
-            isInvalidSelect = ()=>{
-                if (event.target.nodeName=="SELECT"){
+            isInvalidSelect = () => {
+                if (event.target.nodeName == "SELECT") {
                     let filterField = [...event.target.options].filter(options => options.selected).map(option => option.text)
-                    return (filterField=='-')?true:false;
+                    return (filterField == '-') ? true : false;
                 }
                 return false;
             }
@@ -55,26 +55,26 @@ function promptValidation(formFields) {
 function validateFormFields(formFields) {
     let valid = [...formFields].map((field) => {
         let targetPlaceholder = field.getAttribute('placeholder');
-            var targetValue = field.value;
-            let message = field.validationMessage;
-            const connectedValidationId = field.getAttribute('aria-describedby');
-            const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
-            isInvalidSelect = ()=>{
-                if (field.nodeName=="SELECT"){
-                    let filterField = [...field.options].filter(options => options.selected).map(option => option.text)
-                    return (filterField=='-')?true:false;
-                }
-                return false;
+        var targetValue = field.value;
+        let message = field.validationMessage;
+        const connectedValidationId = field.getAttribute('aria-describedby');
+        const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
+        isInvalidSelect = () => {
+            if (field.nodeName == "SELECT") {
+                let filterField = [...field.options].filter(options => options.selected).map(option => option.text)
+                return (filterField == '-') ? true : false;
             }
-
-            if (!field.checkValidity() || isInvalidSelect()) {
-                (!targetValue) ? message = `${targetPlaceholder} field is required.` : message
-                connectedValidation.textContent = message;
             return false;
-            } else {
-                connectedValidation.textContent = '';
-                return true;
-            }
+        }
+
+        if (!field.checkValidity() || isInvalidSelect()) {
+            (!targetValue) ? message = `${targetPlaceholder} field is required.` : message
+            connectedValidation.textContent = message;
+            return false;
+        } else {
+            connectedValidation.textContent = '';
+            return true;
+        }
     });
     return !valid.includes(false)
 }
