@@ -27,22 +27,27 @@
     <form id="patients" class="mt-5">
         <label for="first-name">First Name <span class="asterisk">*</span></label>
         <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-validation"
-            placeholder="First Name" minlength="4" maxlength="16" autocomplete="off" />
+            placeholder="First Name" autocomplete="off" />
         <span id="first-name-validation" aria-live="assertive" class="validation-message error"></span>
         <br>
         <label for="middle-name">Middle Name <span class="asterisk">*</span></label>
         <input type="text" id="middle-name" name="middle-name" required aria-describedby="middle-name-validation"
-            placeholder="Middle Name" minlength="4" maxlength="16" autocomplete="off" />
+            placeholder="Middle Name" autocomplete="off" />
         <span id="middle-name-validation" aria-live="assertive" class="validation-message error"></span>
+        <br>
+        <label for="last-name">Last Name <span class="asterisk">*</span></label>
+        <input type="text" id="last-name" name="last-name" required aria-describedby="last-name-validation"
+            placeholder="Last Name" autocomplete="off" />
+        <span id="last-name-validation" aria-live="assertive" class="validation-message error"></span>
         <br>
         <label for="address">Address <span class="asterisk">*</span></label>
         <input type="text" id="address" name="address" required aria-describedby="address-validation"
-            placeholder="Address" minlength="4" maxlength="16" autocomplete="off" />
+            placeholder="Address" autocomplete="off" />
         <span id="address-validation" aria-live="assertive" class="validation-message error"></span>
         <br>
         <label for="birthdate">Birthdate <span class="asterisk">*</span></label>
         <input type="date" id="birthdate" name="birthdate" required aria-describedby="birthdate-validation"
-            placeholder="Birthdate" minlength="4" maxlength="16" autocomplete="off" />
+            placeholder="Birthdate" autocomplete="off" />
         <span id="birthdate-validation" aria-live="assertive" class="validation-message error"></span>
         <br>
         <label for="contact-number">Contact Number <span class="asterisk">*</span></label>
@@ -118,7 +123,7 @@
         <br>
         <br>
 
-        <button id="save"> Save </button>
+        <button id="save" type="submit"> Save </button>
         <input type="reset">
     </form>
     <br>
@@ -137,9 +142,7 @@
     <script>
         // Validation
         let fields = document.querySelectorAll("#patients > input,select");
-        validateFormFields(fields);
-
-
+        promptValidation(fields);
         window.onload = () => {
             // Login Session
             let session = sessionStorage.getItem('user-session');
@@ -180,16 +183,13 @@
         });
 
         // Save Patient
-        save.onclick = function Save(e) {
+        save.onclick = function (e) {
             e.preventDefault();
-            if (appendSessionFormData('patients')) {
-                let toast = document.getElementById('toast');
-                toast.style.visibility = "visible";
-                toast.textContent = "Saved.";
-                toast.style.color = "green"
+            if (validateFormFields(fields)){
+                if (appendSessionFormData('patients')) {
+                    toast('Saved.', 'green');
             }
-
-
+            }
         }
 
     </script>

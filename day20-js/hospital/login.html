@@ -57,10 +57,9 @@
             let password = document.getElementById('password');
             let signIn = document.getElementById('sign-in');
             let fields = document.querySelectorAll("#login > input,select");
-            validateFormFields(fields);
+            promptValidation(fields);
 
             signIn.onclick = (e) => {
-                e.preventDefault();
                 let users = retrieveSessionData('users')
                 if (users.length == 0) {
                     toast('Register first.', 'red');

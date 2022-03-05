@@ -88,8 +88,8 @@
         }
         function btnSA(box){
             let cboxs = document.getElementsByName("cbox");
-            let toggle = Array(...cboxs).filter(i => i.checked==true)
-            Array(...cboxs).map((cbox,i)=>(toggle.length == cboxs.length)?cboxs[i].checked=false:cboxs[i].checked=true)
+            let filteredArray = Array(...cboxs).filter(i => i.checked==true)
+            Array(...cboxs).map((cbox,i)=>(filteredArray.length == cboxs.length)?cboxs[i].checked=false:cboxs[i].checked=true)
         }
 
     </script>

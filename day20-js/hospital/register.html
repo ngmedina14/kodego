@@ -53,7 +53,7 @@
         <script>
             let save = document.getElementById('save');
             let fields = document.querySelectorAll("#users > input,select");
-            validateFormFields(fields)
+            promptValidation(fields)
 
             save.onclick = function Save(e) {
                 e.preventDefault();
@@ -68,8 +68,10 @@
                         if (user.username == username.value) {
                             toast('Username already taken.', 'red');
                         } else {
-                            if (appendSessionFormData('users')) {
-                                toast('Saved.', 'green');
+                            if (validateFormFields(fields)) {
+                                if (appendSessionFormData('users')) {
+                                    toast('Saved.', 'green');
+                                }
                             }
                         }
                     });
