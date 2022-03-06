@@ -25,20 +25,23 @@
     <div class="container-md d-flex justify-content-center align-items-center h-100vh">
         <div class="row">
             <h2>Registration</h2>
-            <form id="users">
-                <label for="username">Username <span class="asterisk">*</span></label>
-                <input type="text" id="username" name="username" required aria-describedby="username-validation"
-                    placeholder="Username" minlength="4" maxlength="16" autocomplete="off" />
-                <span id="username-validation" aria-live="assertive" class="validation-message error"></span>
-                <br>
-                <label for="password">Password <span class="asterisk">*</span></label>
-                <input type="password" id="password" name="password" required aria-describedby="password-validation"
-                    placeholder="Password" minlength="4" autocomplete="off" />
-                <span id="password-validation" aria-live="assertive" class="validation-message error"></span>
-                <br>
-                <button id="save"> Register </button>
-                <input type="reset">
-                <a href="./login.html">login</a>
+            <form id="users" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username" name="username" required
+                        aria-describedby="username-validation" placeholder="Username" minlength="4" maxlength="16"
+                        autocomplete="off" />
+                    <label for="username">Username <span class="asterisk">*</span></label>
+                    <small id="username-validation" aria-live="assertive"></small>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="password" required
+                        aria-describedby="password-validation" placeholder="Password" autocomplete="off" />
+                    <label for="password">Password <span class="asterisk">*</span></label>
+                    <small id="password-validation"></small>
+                </div>
+                <button class="btn btn-dark" id="save"> Register </button>
+                <input class="btn btn-secondary" type="reset">
+                <a class="btn btn-outline-secondary" href="./login.html">login</a>
             </form>
             <p id="toast"></p>
         </div>
@@ -49,10 +52,10 @@
 
         <!-- Patient Project -->
         <script src="./asset/js/common.js"></script>
-        <script src="./asset/js/form.js"></script>
+        <script src="./asset/js/form-bootstrap5.js"></script>
         <script>
             let save = document.getElementById('save');
-            let fields = document.querySelectorAll("#users > input,select");
+            let fields = document.querySelectorAll("#users input,select");
             promptValidation(fields)
 
             save.onclick = function (e) {
