@@ -76,5 +76,6 @@ function validateFormFields(formFields) {
             return true;
         }
     });
+    (valid.includes(false)) ? [...formFields][valid.findIndex(element => element == false)].focus() : null;
     return !valid.includes(false)
 }

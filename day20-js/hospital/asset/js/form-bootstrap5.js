@@ -3,7 +3,7 @@
 // Validate the fields from form
 // ex.
 // <form id="login"> <input required placeholder="field" aria-describedby="errorElementID"/> </form>
-// let fields = document.querySelectorAll("#login > input,select");
+// let fields = document.querySelectorAll("#login input,select");
 // promptValidation(fields)
 function promptValidation(formFields) {
     [...formFields].map((field) => {
@@ -34,16 +34,14 @@ function promptValidation(formFields) {
                 return false;
             }
 
-
+            // if Invalid
             if (!isValid || isInvalidSelect()) {
                 (!targetValue) ? message = `${targetPlaceholder} field is required.` : message
                 event.target.classList.add("is-invalid");
                 connectedValidation.classList.add("invalid-tooltip");
                 connectedValidation.textContent = message;
-            } else {
-                (event.target.classList.contains('is-invalid')) ? event.target.classList.remove("is-invalid"):
-                (connectedValidation.classList.contains('invalid-tooltip')) ? connectedValidation.classList.remove("invalid-tooltip"):
-                (connectedValidation.classList.contains('invalid-feedback')) ? connectedValidation.classList.remove("invalid-feedback"):
+            } else { // if Valid
+                event.target.classList.remove("is-invalid");
                 connectedValidation.textContent = '';
             }
         };
@@ -53,7 +51,7 @@ function promptValidation(formFields) {
 // Check all valid fields simultaneously and show the validation message
 // ex.
 // <form id="login"> <input required placeholder="field" aria-describedby="errorElementID"/> </form>
-// let fields = document.querySelectorAll("#login > input,select");
+// let fields = document.querySelectorAll("#login input,select");
 // validateFormFields(fields)
 // True  = all fields are valid
 // False = There's an invalid field
@@ -72,20 +70,20 @@ function validateFormFields(formFields) {
             return false;
         }
 
+        // if Invalid
         if (!field.checkValidity() || isInvalidSelect()) {
             (!targetValue) ? message = `${targetPlaceholder} field is required.` : message
             field.classList.add("is-invalid");
-                (connectedValidation.classList.contains('invalid-tooltip')) ? connectedValidation.classList.remove("invalid-tooltip"):
+            connectedValidation.classList.remove("invalid-tooltip");
             connectedValidation.classList.add("invalid-feedback");
             connectedValidation.textContent = message;
             return false;
-        } else {
-            (field.classList.contains('is-invalid')) ? event.target.classList.remove("is-invalid"):
-                (connectedValidation.classList.contains('invalid-tooltip')) ? connectedValidation.classList.remove("invalid-tooltip"):
-                (connectedValidation.classList.contains('invalid-feedback')) ? connectedValidation.classList.remove("invalid-feedback"):
+        } else {// if Valid
+            field.classList.remove("is-invalid") ;
             connectedValidation.textContent = '';
             return true;
         }
     });
+    (valid.includes(false)) ? [...formFields][valid.findIndex(element => element == false)].focus() : null;
     return !valid.includes(false)
 }
