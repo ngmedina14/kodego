@@ -23,114 +23,114 @@
 
 <body>
     <div class="container-md d-flex justify-content-center align-items-start h-100vh">
-    <h2 class="text-nowrap">New Patient</h2>
-    <form id="patients" class="mt-5">
-        <label for="first-name">First Name <span class="asterisk">*</span></label>
-        <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-validation"
-            placeholder="First Name" autocomplete="off" />
-        <span id="first-name-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="middle-name">Middle Name <span class="asterisk">*</span></label>
-        <input type="text" id="middle-name" name="middle-name" required aria-describedby="middle-name-validation"
-            placeholder="Middle Name" autocomplete="off" />
-        <span id="middle-name-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="last-name">Last Name <span class="asterisk">*</span></label>
-        <input type="text" id="last-name" name="last-name" required aria-describedby="last-name-validation"
-            placeholder="Last Name" autocomplete="off" />
-        <span id="last-name-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="address">Address <span class="asterisk">*</span></label>
-        <input type="text" id="address" name="address" required aria-describedby="address-validation"
-            placeholder="Address" autocomplete="off" />
-        <span id="address-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="birthdate">Birthdate <span class="asterisk">*</span></label>
-        <input type="date" id="birthdate" name="birthdate" required aria-describedby="birthdate-validation"
-            placeholder="Birthdate" autocomplete="off" />
-        <span id="birthdate-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="contact-number">Contact Number <span class="asterisk">*</span></label>
-        <input type="text" id="contact-number" name="contact-number" required pattern="^[0-9]{11}"
-            aria-describedby="contact-number-validation" placeholder="Contact Number" minlength="4" maxlength="16"
-            autocomplete="off" />
-        <span id="contact-number-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <label for="male">Gender <span class="asterisk">*</span></label>
-        <input type="radio" id="male" name="gender" required aria-describedby="gender-validation" minlength="4"
-            maxlength="16" autocomplete="off" />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" required aria-describedby="gender-validation" minlength="4"
-            maxlength="16" autocomplete="off" />
-        <label for="female">Female</label>
-        <span id="gender-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
+        <h2 class="text-nowrap">New Patient</h2>
+        <form id="patients" class="mt-5">
+            <label for="first-name">First Name <span class="asterisk">*</span></label>
+            <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-validation"
+                placeholder="First Name" autocomplete="off" />
+            <span id="first-name-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="middle-name">Middle Name <span class="asterisk">*</span></label>
+            <input type="text" id="middle-name" name="middle-name" required aria-describedby="middle-name-validation"
+                placeholder="Middle Name" autocomplete="off" />
+            <span id="middle-name-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="last-name">Last Name <span class="asterisk">*</span></label>
+            <input type="text" id="last-name" name="last-name" required aria-describedby="last-name-validation"
+                placeholder="Last Name" autocomplete="off" />
+            <span id="last-name-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="address">Address <span class="asterisk">*</span></label>
+            <input type="text" id="address" name="address" required aria-describedby="address-validation"
+                placeholder="Address" autocomplete="off" />
+            <span id="address-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="birthdate">Birthdate <span class="asterisk">*</span></label>
+            <input type="date" id="birthdate" name="birthdate" required aria-describedby="birthdate-validation"
+                placeholder="Birthdate" autocomplete="off" />
+            <span id="birthdate-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="contact-number">Contact Number <span class="asterisk">*</span></label>
+            <input type="text" id="contact-number" name="contact-number" required pattern="^[0-9]{10,11}"
+                aria-describedby="contact-number-validation" placeholder="Contact Number" minlength="4" maxlength="16"
+                autocomplete="off" />
+            <span id="contact-number-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <label for="male">Gender <span class="asterisk">*</span></label>
+            <input type="radio" id="male" name="gender" required aria-describedby="gender-validation" minlength="4"
+                maxlength="16" autocomplete="off" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" required aria-describedby="gender-validation" minlength="4"
+                maxlength="16" autocomplete="off" />
+            <label for="female">Female</label>
+            <span id="gender-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
 
-        <p>Medical History</p>
+            <p>Medical History</p>
 
-        <input type="checkbox" id="asthma" value="1" name="medical-history" />
-        <label for="asthma">Asthma</label>
-        <br>
+            <input type="checkbox" id="asthma" value="1" name="medical-history" />
+            <label for="asthma">Asthma</label>
+            <br>
 
-        <input type="checkbox" id="cancer" value="2" name="medical-history" />
-        <label for="cancer">Cancer</label>
-        <br>
+            <input type="checkbox" id="cancer" value="2" name="medical-history" />
+            <label for="cancer">Cancer</label>
+            <br>
 
-        <input type="checkbox" id="cardiac-disease" value="3" name="medical-history" />
-        <label for="cardiac-disease">Cardiac Disease</label>
-        <br>
+            <input type="checkbox" id="cardiac-disease" value="3" name="medical-history" />
+            <label for="cardiac-disease">Cardiac Disease</label>
+            <br>
 
-        <input type="checkbox" id="diabetes" value="4" name="medical-history" />
-        <label for="diabetes">Diabetes</label>
-        <br>
+            <input type="checkbox" id="diabetes" value="4" name="medical-history" />
+            <label for="diabetes">Diabetes</label>
+            <br>
 
-        <input type="checkbox" id="hypertension" value="5" name="medical-history" />
-        <label for="hypertension">Hypertension</label>
-        <br>
+            <input type="checkbox" id="hypertension" value="5" name="medical-history" />
+            <label for="hypertension">Hypertension</label>
+            <br>
 
-        <input type="checkbox" id="psychiatric-disorder" value="6" name="medical-history" />
-        <label for="psychiatric-disorder">Psychiatric Disorder</label>
-        <br>
+            <input type="checkbox" id="psychiatric-disorder" value="6" name="medical-history" />
+            <label for="psychiatric-disorder">Psychiatric Disorder</label>
+            <br>
 
-        <input type="checkbox" id="epilepsy" value="7" name="medical-history" />
-        <label for="epilepsy">Epilepsy</label>
-        <br>
+            <input type="checkbox" id="epilepsy" value="7" name="medical-history" />
+            <label for="epilepsy">Epilepsy</label>
+            <br>
 
-        <input type="checkbox" id="others" value="8" name="medical-history" />
-        <label for="others">Others</label>
-        <br>
-        <label for="current-symptoms">Current Symptoms</label>
-        <select type="text" id="current-symptoms" name="current-symptoms" multiple>
-            <option value="Chest Pain">Chest Pain</option>
-            <option value="Respitory">Respitory</option>
-            <option value="Hematological">Hematological</option>
-            <option value="Lymphatic">Lymphatic</option>
-            <option value="Neurological">Neurological</option>
-            <option value="Psychiatric">Psychiatric</option>
-            <option value="Gastrointestinal">Gastrointestinal</option>
-            <option value="Weight">Weight</option>
-        </select>
-        <br>
-        <p>Are you currently taking medication? </p>
-        <input type="radio" id="yes" value="1" name="yes-no" />
-        <label for="yes">Yes</label>
-        <br>
-        <input type="radio" id="no" value="0" name="yes-no" checked />
-        <label for="no">No</label>
-        <br>
-        <input type="text" id="medication" name="medication" disabled />
-        <span id="medication-validation" aria-live="assertive" class="validation-message error"></span>
-        <br>
-        <br>
+            <input type="checkbox" id="others" value="8" name="medical-history" />
+            <label for="others">Others</label>
+            <br>
+            <label for="current-symptoms">Current Symptoms</label>
+            <select type="text" id="current-symptoms" name="current-symptoms" multiple>
+                <option value="Chest Pain">Chest Pain</option>
+                <option value="Respitory">Respitory</option>
+                <option value="Hematological">Hematological</option>
+                <option value="Lymphatic">Lymphatic</option>
+                <option value="Neurological">Neurological</option>
+                <option value="Psychiatric">Psychiatric</option>
+                <option value="Gastrointestinal">Gastrointestinal</option>
+                <option value="Weight">Weight</option>
+            </select>
+            <br>
+            <p>Are you currently taking medication? </p>
+            <input type="radio" id="yes" value="1" name="yes-no" />
+            <label for="yes">Yes</label>
+            <br>
+            <input type="radio" id="no" value="0" name="yes-no" checked />
+            <label for="no">No</label>
+            <br>
+            <input type="text" id="medication" name="medication" disabled />
+            <span id="medication-validation" aria-live="assertive" class="validation-message error"></span>
+            <br>
+            <br>
 
-        <button id="save" type="submit"> Save </button>
-        <input type="reset">
-    </form>
-    <br>
-    <button id="logout" class="text-nowrap"></button>
-    <p id="toast"></p>
+            <button id="save" type="submit"> Save </button>
+            <input type="reset">
+            <p id="toast"></p>
+        </form>
+        <br>
+        <button id="logout" class="text-nowrap"></button>
 
-</div>
+    </div>
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -141,7 +141,7 @@
     <script src="./asset/js/form.js"></script>
     <script>
         // Validation
-        let fields = document.querySelectorAll("#patients > input,select");
+        let fields = document.querySelectorAll("#patients input,select");
         promptValidation(fields);
         window.onload = () => {
             // Login Session
@@ -185,10 +185,11 @@
         // Save Patient
         save.onclick = function (e) {
             e.preventDefault();
-            if (validateFormFields(fields)){
+            if (validateFormFields(fields)) {
                 if (appendSessionFormData('patients')) {
+                    alert('Saved.')
                     toast('Saved.', 'green');
-            }
+                }
             }
         }
 

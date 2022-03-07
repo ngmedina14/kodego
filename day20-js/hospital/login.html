@@ -69,13 +69,17 @@
             if (users.length == 0) {
                 toast('Register first.', 'red');
             } else {
-                users.map((user) => {
+                let login = users.map((user) => {
                     if (user[0][1] == username.value && user[1][1] == password.value) {
                         sessionStorage.setItem('user-session', user[0][1]);
                         window.location.href = 'new-record.html';
+                        return true
+                    } else {
+                        return false
                     }
                 });
-                toast('Invalid login.', 'red');
+                (login.includes(true)) ? toast('Success.', 'green'):toast('Invalid login.', 'red');
+                
             }
         }
 
