@@ -22,6 +22,11 @@
 </head>
 
 <body>
+    <nav class="nav nav-tabs"role="tablist">
+        <a class="nav-link" href="./dashboard.html">Dashboard</a>
+        <a class="nav-link active bg-primary text-light" href="#">Add Patient</a>
+        <button id="logout" class="btn btn-outline-secondary text-nowrap"></button>
+    </nav>
     <div class="container-md d-flex justify-content-center align-items-start h-100vh">
         <h2 class="text-nowrap">New Patient</h2>
         <form id="patients" class="mt-5">
@@ -57,46 +62,46 @@
             <span id="contact-number-validation" aria-live="assertive" class="validation-message error"></span>
             <br>
             <label for="male">Gender <span class="asterisk">*</span></label>
-            <input type="radio" id="male" name="gender" required aria-describedby="gender-validation" minlength="4"
-                maxlength="16" autocomplete="off" />
+            <input type="radio" id="male" name="gender" value="male" required aria-describedby="gender-validation"
+                minlength="4" maxlength="16" autocomplete="off" />
             <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" required aria-describedby="gender-validation" minlength="4"
-                maxlength="16" autocomplete="off" />
+            <input type="radio" id="female" name="gender" value="female" required aria-describedby="gender-validation"
+                minlength="4" maxlength="16" autocomplete="off" />
             <label for="female">Female</label>
             <span id="gender-validation" aria-live="assertive" class="validation-message error"></span>
             <br>
 
             <p>Medical History</p>
 
-            <input type="checkbox" id="asthma" value="1" name="medical-history" />
+            <input type="checkbox" id="asthma" value="Asthma" name="medical-history" />
             <label for="asthma">Asthma</label>
             <br>
 
-            <input type="checkbox" id="cancer" value="2" name="medical-history" />
+            <input type="checkbox" id="cancer" value="Cancer" name="medical-history" />
             <label for="cancer">Cancer</label>
             <br>
 
-            <input type="checkbox" id="cardiac-disease" value="3" name="medical-history" />
+            <input type="checkbox" id="cardiac-disease" value="Cardiac Disease" name="medical-history" />
             <label for="cardiac-disease">Cardiac Disease</label>
             <br>
 
-            <input type="checkbox" id="diabetes" value="4" name="medical-history" />
+            <input type="checkbox" id="diabetes" value="Diabetes" name="medical-history" />
             <label for="diabetes">Diabetes</label>
             <br>
 
-            <input type="checkbox" id="hypertension" value="5" name="medical-history" />
+            <input type="checkbox" id="hypertension" value="Hypertension" name="medical-history" />
             <label for="hypertension">Hypertension</label>
             <br>
 
-            <input type="checkbox" id="psychiatric-disorder" value="6" name="medical-history" />
+            <input type="checkbox" id="psychiatric-disorder" value="Psychiatric Disorder" name="medical-history" />
             <label for="psychiatric-disorder">Psychiatric Disorder</label>
             <br>
 
-            <input type="checkbox" id="epilepsy" value="7" name="medical-history" />
+            <input type="checkbox" id="epilepsy" value="Epilepsy" name="medical-history" />
             <label for="epilepsy">Epilepsy</label>
             <br>
 
-            <input type="checkbox" id="others" value="8" name="medical-history" />
+            <input type="checkbox" id="others" value="Others" name="medical-history" />
             <label for="others">Others</label>
             <br>
             <label for="current-symptoms">Current Symptoms</label>
@@ -128,7 +133,6 @@
             <p id="toast"></p>
         </form>
         <br>
-        <button id="logout" class="text-nowrap"></button>
 
     </div>
     <!-- Bootstrap JavaScript Bundle with Popper -->

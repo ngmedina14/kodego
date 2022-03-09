@@ -72,14 +72,13 @@
                 let login = users.map((user) => {
                     if (user["username"] == username.value && user["password"] == password.value) {
                         sessionStorage.setItem('user-session', user["username"]);
-                        window.location.href = 'new-record.html';
+                        window.location.href = 'dashboard.html';
                         return true
                     } else {
                         return false
                     }
                 });
                 (login.includes(true)) ? toast('Success.', 'green'):toast('Invalid login.', 'red');
-                
             }
         }
 

@@ -2,66 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
 
-    <!-- Bootstrap CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
-        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+    integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab"
-            aria-controls="nav-home" aria-selected="true">Dashboard</a>
-        <a class="nav-link" id="nav-new-patient-tab" data-bs-toggle="tab" href="#nav-new-patient" role="tab"
-            aria-controls="nav-new-patient" aria-selected="false">Add Patient</a>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Full Name</h5>
-                      <p class="card-text m-0">Address</p>
-                      <p class="card-text m-0">Birthdate</p>
-                      <p class="card-text m-0">Contact</p>
-                      <p class="card-text m-0">Gender</p>
-                      <p class="card-text m-0">Medical History</p>
-                      <p class="card-text m-0">Current Symptoms</p>
-                      <p class="card-text m-0">Current Medication</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="tab-pane fade" id="nav-new-patient" role="tabpanel" aria-labelledby="nav-new-patient-tab">
+  <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-link active bg-primary text-light" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab"
+      aria-controls="nav-home" aria-selected="true">Dashboard</a>
+    <!-- <a class="nav-link" id="nav-new-patient-tab" data-bs-toggle="tab" href="#nav-new-patient" role="tab"
+      aria-controls="nav-new-patient" aria-selected="false">Add Patient</a> -->
+    <a class="nav-link" href="./new-record.html">Add Patient</a>
+    <button id="logout" class="btn btn-outline-secondary text-nowrap"></button>
 
-        </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div id="list" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 m-1">
+        <!-- <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Full Name2</h5>
+              <p class="card-text m-0">Address</p>
+              <p class="card-text m-0">Birthdate</p>
+              <p class="card-text m-0">Contact</p>
+              <p class="card-text m-0">Gender</p>
+              <p class="card-text m-0">Medical History</p>
+              <p class="card-text m-0">Current Symptoms</p>
+              <p class="card-text m-0">Current Medication</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
     </div>
+  </div>
+
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Patient Project -->
+  <script src="./asset/js/common.js"></script>
+  <script src="./asset/js/form-bootstrap5.js"></script>
+  <script>
+    window.onload = () => {
+      // Login Session
+      let session = sessionStorage.getItem('user-session');
+      logout.textContent = `Logout ${session.charAt(0).toUpperCase() + session.slice(1)}`
+    };
+    // Logout remove session
+    logout.onclick = () => {
+      sessionStorage.removeItem('user-session')
+      window.location.href = 'login.html';
+    }
+
+
+    let patients = retrieveSessionData('patients');
+    let list = document.getElementById('list');
+    patients.forEach((patient) => {
+      let fullName = `${patient["first-name"]} ${patient["last-name"]}`
+      let details = new Array()
+      if (patient.hasOwnProperty("address")) { details.push({ "Address": patient["address"] }) }
+      if (patient.hasOwnProperty("birthdate")) { details.push({ "Birthdate": patient["birthdate"] }) }
+      if (patient.hasOwnProperty("contact-number")) { details.push({ "Contact": patient["contact-number"] }) }
+      if (patient.hasOwnProperty("gender")) { details.push({ "Gender": patient["gender"] }) }
+      if (patient.hasOwnProperty("medical-history")) { details.push({ "Medical History": patient["medical-history"] }) }
+      if (patient.hasOwnProperty("current-symptoms")) { details.push({ "Current Symptoms": patient["current-symptoms"] }) }
+      if (patient.hasOwnProperty("medication")) { details.push({ "Current Medication": patient["medication"] }) }
+
+      createPatientCard('list', fullName, details)
+
+    })
+    // <div class="col">
+    //       <div class="card">
+    //         <div class="card-body">
+    //           <h5 class="card-title">Full Name1</h5>
+    //           <p class="card-text m-0">Address</p>
+    //           <p class="card-text m-0">Birthdate</p>
+    //           <p class="card-text m-0">Contact</p>
+    //           <p class="card-text m-0">Gender</p>
+    //           <p class="card-text m-0">Medical History</p>
+    //           <p class="card-text m-0">Current Symptoms</p>
+    //           <p class="card-text m-0">Current Medication</p>
+    //         </div>
+    //       </div>
+    //     </div>
+
+    function range(size, startAt = 0) {
+      return [...Array(size).keys()].map(i => i + startAt);
+    }
 
 
 
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    function createPatientCard(parentID, title, data) {
+      // get parent id 
+      var nodeParent = document.getElementById('list');
 
-    <!-- Patient Project -->
-    <script src="./asset/js/common.js"></script>
-    <script src="./asset/js/form.js"></script>
-    <script>
+      // create Element
+      var container = document.createElement("div");
+      var card = document.createElement("div");
+      var body = document.createElement("div");
+      var header = document.createElement("h5");
 
-    </script>
+      // create Text
+      var textTitle = document.createTextNode(title);
+
+      // add class to Element
+      container.classList.add("col");
+      card.classList.add("card");
+      body.classList.add("card-body");
+      header.classList.add("card-title");
+
+      // append Text to Element
+      header.appendChild(textTitle);
+
+      // append Element to ElementParent
+      container.appendChild(card);
+      card.appendChild(body);
+      body.appendChild(header);
+
+      // append Data List
+      data.map((data) => {
+        var key = Object.keys(data)[0];
+        var value = data[key];
+        var list = document.createElement("p");
+        list.classList.add("card-text", "m-0");
+        var listText = document.createTextNode(`${key}  :  ${value}`);
+        list.appendChild(listText);
+        body.appendChild(list);
+
+      })
+
+
+
+      // append cardComponent to Parent
+      nodeParent.appendChild(container);
+    }
+  </script>
 </body>
 
 </html>
