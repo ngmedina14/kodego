@@ -70,8 +70,8 @@
                 toast('Register first.', 'red');
             } else {
                 let login = users.map((user) => {
-                    if (user[0][1] == username.value && user[1][1] == password.value) {
-                        sessionStorage.setItem('user-session', user[0][1]);
+                    if (user["username"] == username.value && user["password"] == password.value) {
+                        sessionStorage.setItem('user-session', user["username"]);
                         window.location.href = 'new-record.html';
                         return true
                     } else {

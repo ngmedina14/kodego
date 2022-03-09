@@ -15,7 +15,18 @@ function appendSessionFormData(formID) {
         let formArray = retrieveSessionData(formID);
         let form = document.getElementById(formID);
         let formData = new FormData(form);
-        [...formData].map((value, key) => objectItem[key] = value);
+        [...formData].map((value) => {
+            console.log([...formData].filter((data) => data[0] == value[0]).length != 1, value[0], value[1]);
+            if ([...formData].filter((data) => data[0] == value[0]).length != 1) {
+                if (objectItem.hasOwnProperty(value[0])) {
+                    objectItem[value[0]].push(value[1])
+                } else {
+                    objectItem[value[0]] = [value[1]]
+                }
+            } else {
+                objectItem[value[0]] = value[1]
+            }
+        });
         (formArray.length === 0) ? formArray = [objectItem] : formArray.push(objectItem);
         sessionStorage.setItem(formID, JSON.stringify(formArray));
         return true
