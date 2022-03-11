@@ -68,7 +68,7 @@
                         }
                     }
                 } else {
-                    isvalid = users.map((user) => (user[0][1] == username.value) ? true : false).includes(true);
+                    isvalid = users.map((user) => (user["username"] == username.value) ? true : false).includes(true);
                     if (isvalid) {
                         toast('Username already taken.', 'red');
                     } else {
