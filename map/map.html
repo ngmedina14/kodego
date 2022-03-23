@@ -24,6 +24,8 @@
     <button id="sat">Satallite</button>
     <button id="hybrid">Hybrid</button>
     <button id="simple">Simple</button>
+    <br>
+    <button id="save">SAVE</button>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
@@ -100,7 +102,10 @@
         function onDragEnd(e) {
             console.log("end")
         }
-
+        save.onclick = ()=>{
+            var list = loc.getLatLng()
+            alert(list.lat+" "+list.lng)
+        }
         map.on('dragend', onDragEnd);
         map.on('locationfound', onLocationFound);
         map.on('locationerror', onLocationError);
