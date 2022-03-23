@@ -70,6 +70,8 @@
         street.onclick = ()=> googleStreets.addTo(map);
         sat.onclick = ()=> googleSat.addTo(map);
         hybrid.onclick = ()=> googleHybrid.addTo(map);
+        // default Map Layer UI
+        googleSat.addTo(map);
 
         // Go to location
         map.locate({ setView: true, maxZoom: 50 });
@@ -81,8 +83,6 @@
         function onMapClick(e) {
             loc.bindPopup("You are within " + radius + " meters from this point <br>"
                 +e.latlng.lat+" "+e.latlng.lng).openPopup();
-
-            // alert("You clicked the map at " + e.latlng);
         }
 
         function onLocationFound(e) {
