@@ -11,7 +11,7 @@
         crossorigin="" />
     <style>
         #map {
-            height: 100vh;
+            height: 80vh;
         }
     </style>
 </head>
@@ -19,7 +19,11 @@
 <body>
 
     <div id="map"></div>
-    <a href="https://my-location.org/?lat=13.778944&lng=121.0679296" target="_blank">(13.778944,121.0679296)</a>
+    <button id="terrain">Terrain</button>
+    <button id="street">Street</button>
+    <button id="sat">Satallite</button>
+    <button id="hybrid">Hybrid</button>
+    <button id="simple">Simple</button>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
@@ -61,10 +65,11 @@
         });
 
         // Pass layer to map
-        // osm.addTo(map);
-        googleStreets.addTo(map);
-        // googleHybrid.addTo(map);
-        // googleTerrain.addTo(map);
+        terrain.onclick = ()=> googleTerrain.addTo(map);
+        simple.onclick = ()=> osm.addTo(map);
+        street.onclick = ()=> googleStreets.addTo(map);
+        sat.onclick = ()=> googleSat.addTo(map);
+        hybrid.onclick = ()=> googleHybrid.addTo(map);
 
         // Go to location
         map.locate({ setView: true, maxZoom: 50 });
