@@ -53,18 +53,14 @@
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             maxZoom: 20,
         });
-        var dark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-            maxZoom: 20,
-        });
 
         // default Map Layer UI
-        googleHybrid.addTo(map);
+        osm.addTo(map);
 
         var baseMaps = {
             "Satallite": googleHybrid,
             "Street": googleStreets,
             "Simple": osm,
-            "Dark": dark,
         }
         L.control.layers(baseMaps).addTo(map);
 
