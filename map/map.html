@@ -19,13 +19,8 @@
 <body>
 
     <div id="map"></div>
-    <button id="terrain">Terrain</button>
-    <button id="street">Street</button>
-    <button id="sat">Satallite</button>
-    <button id="hybrid">Hybrid</button>
-    <button id="simple">Simple</button>
-    <br>
     <button id="save">SAVE</button>
+    <button id="locate">Locate</button>
     <div id="container"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -55,26 +50,21 @@
             maxZoom: 20,
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
-        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         });
+        var dark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        });
 
-        // Pass layer to map
-        terrain.onclick = ()=> googleTerrain.addTo(map);
-        simple.onclick = ()=> osm.addTo(map);
-        street.onclick = ()=> googleStreets.addTo(map);
-        sat.onclick = ()=> googleSat.addTo(map);
-        hybrid.onclick = ()=> googleHybrid.addTo(map);
         // default Map Layer UI
         googleHybrid.addTo(map);
+
+        var baseMaps = {
+            "Satallite": googleHybrid,
+            "Street": googleStreets,
+            "Simple": osm,
+            "Dark": dark,
+        }
+        L.control.layers(baseMaps).addTo(map);
 
         // Go to location
         map.locate({ setView: true, maxZoom: 50 });
@@ -87,6 +77,8 @@
             loc.bindPopup("You are within " + radius + " meters from this point <br>"
                 +e.latlng.lat+" "+e.latlng.lng).openPopup();
         }
+
+        locate.onclick = ()=>{map.removeLayer(loc); map.locate({ setView: true, maxZoom: 50 }); } 
 
         function onLocationFound(e) {
             radius = e.accuracy;
