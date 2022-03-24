@@ -72,6 +72,11 @@
         var radius;
         var circle;
 
+        var myIcon = L.icon({
+            iconUrl: 'pin.png',
+            iconSize: [60, 60],
+        });
+
         // do when map clicked
         function onMapClick(e) {
             loc.bindPopup("You are within " + radius + " meters from this point <br>"
@@ -82,7 +87,7 @@
         function onLocationFound(e) {
             radius = e.accuracy;
 
-            loc = L.marker(e.latlng, { draggable: true }).addTo(map)
+            loc = L.marker(e.latlng, { icon: myIcon, draggable: true }).addTo(map)
             text = loc.bindPopup("You are within " + radius + " meters from this point <br>"
                 + e.latlng.lat + " " + e.latlng.lng).openPopup();
 
