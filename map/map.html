@@ -72,14 +72,17 @@
         var loc;
         var text;
         var radius;
+        var circle;
 
         function onMapClick(e) {
             loc.bindPopup("You are within " + radius + " meters from this point <br>"
                 +e.latlng.lat+" "+e.latlng.lng).openPopup();
         }
 
-        locate.onclick = ()=>{map.removeLayer(loc); map.locate({ setView: true, maxZoom: 50 }); } 
+        // Relocate
+        locate.onclick = ()=>{map.removeLayer(loc,circle); map.locate({ setView: true, maxZoom: 50 }); } 
 
+        // When Located
         function onLocationFound(e) {
             radius = e.accuracy;
 
@@ -87,11 +90,15 @@
             text= loc.bindPopup("You are within " + radius + " meters from this point <br>"
                 +e.latlng.lat+" "+e.latlng.lng).openPopup();
 
-            L.circle(e.latlng, radius).addTo(map);
+            circle = L.circle(e.latlng, radius).addTo(map);
         }
+
+        //if Locate ERROR
         function onLocationError(e) {
             alert(e.message);
         }
+
+        // if map drag ends
         function onDragEnd(e) {
             console.log("end")
         }
