@@ -26,6 +26,7 @@
     <button id="simple">Simple</button>
     <br>
     <button id="save">SAVE</button>
+    <div id="container"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
@@ -104,7 +105,13 @@
         }
         save.onclick = ()=>{
             var list = loc.getLatLng()
-            alert(list.lat+" "+list.lng)
+            var link = document.createElement('a')
+            var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
+            var text = document.createTextNode(`${list.lat},${list.lng}`)
+            link.appendChild(text);
+            var container = document.getElementById('container')
+            container.appendChild(link);
+            // alert(list.lat+" "+list.lng)
         }
         map.on('dragend', onDragEnd);
         map.on('locationfound', onLocationFound);
