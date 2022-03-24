@@ -102,14 +102,18 @@
         function onDragEnd(e) {
             console.log("end")
         }
+
+        // get lat ang long on save
         save.onclick = ()=>{
             var list = loc.getLatLng()
+            var child = document.createElement('div')
             var link = document.createElement('a')
             var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
             var text = document.createTextNode(`${list.lat},${list.lng}`)
             link.appendChild(text);
             var container = document.getElementById('container')
-            container.appendChild(link);
+            child.appendChild(link);
+            container.appendChild(child);
             // alert(list.lat+" "+list.lng)
         }
         map.on('dragend', onDragEnd);
