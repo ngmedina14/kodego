@@ -80,7 +80,10 @@
         }
 
         // Relocate
-        locate.onclick = ()=>{map.removeLayer(loc,circle); map.locate({ setView: true, maxZoom: 50 }); } 
+        locate.onclick = ()=>{
+            map.removeLayer(loc);
+            map.removeLayer(circle);
+            map.locate({ setView: true, maxZoom: 50 }); } 
 
         // When Located
         function onLocationFound(e) {
