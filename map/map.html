@@ -42,11 +42,11 @@
         //     zoomOffset: -1,
         //     accessToken: 'pk.eyJ1IjoiY3JlYW1mbGlja3MiLCJhIjoiY2wxM2hmbmE2M2VtczNqcGtwMzFueHVybiJ9.JLNNobuftbdChMdVNnBjcg'
         // }).addTo(map);
-        var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        var googleStreets = L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
             maxZoom: 20,
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
-        var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+        var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
             maxZoom: 20,
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
@@ -55,7 +55,7 @@
         });
 
         // default Map Layer UI
-        osm.addTo(map);
+        googleHybrid.addTo(map);
 
         var baseMaps = {
             "Satallite": googleHybrid,
@@ -72,24 +72,19 @@
         var radius;
         var circle;
 
+        // do when map clicked
         function onMapClick(e) {
             loc.bindPopup("You are within " + radius + " meters from this point <br>"
-                +e.latlng.lat+" "+e.latlng.lng).openPopup();
+                + e.latlng.lat + " " + e.latlng.lng).openPopup();
         }
-
-        // Relocate
-        locate.onclick = ()=>{
-            map.removeLayer(loc);
-            map.removeLayer(circle);
-            map.locate({ setView: true, maxZoom: 50 }); } 
 
         // When Located
         function onLocationFound(e) {
             radius = e.accuracy;
 
-            loc = L.marker(e.latlng,{draggable:true}).addTo(map)
-            text= loc.bindPopup("You are within " + radius + " meters from this point <br>"
-                +e.latlng.lat+" "+e.latlng.lng).openPopup();
+            loc = L.marker(e.latlng, { draggable: true }).addTo(map)
+            text = loc.bindPopup("You are within " + radius + " meters from this point <br>"
+                + e.latlng.lat + " " + e.latlng.lng).openPopup();
 
             circle = L.circle(e.latlng, radius).addTo(map);
         }
@@ -104,8 +99,21 @@
             console.log("end")
         }
 
+
+        map.on('dragend', onDragEnd);
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+        map.on('click', onMapClick);
+
+        // Relocate
+        locate.onclick = () => {
+            map.removeLayer(loc);
+            map.removeLayer(circle);
+            map.locate({ setView: true, maxZoom: 50 });
+        }
+
         // get lat ang long on save
-        save.onclick = ()=>{
+        save.onclick = () => {
             var list = loc.getLatLng()
             var child = document.createElement('div')
             var link = document.createElement('a')
@@ -117,10 +125,6 @@
             container.appendChild(child);
             // alert(list.lat+" "+list.lng)
         }
-        map.on('dragend', onDragEnd);
-        map.on('locationfound', onLocationFound);
-        map.on('locationerror', onLocationError);
-        map.on('click', onMapClick);
     </script>
 </body>
 
