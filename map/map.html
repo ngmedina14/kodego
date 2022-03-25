@@ -132,13 +132,12 @@
             var child = document.createElement('div')
             var link = document.createElement('a')
             var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
-            var text = document.createTextNode(`${list.lat},${list.lng}`)
+            var text = document.createTextNode(`${list.lat},${list.lng} ${getMobileOperatingSystem()}`)
             link.appendChild(text);
             var container = document.getElementById('container')
             child.appendChild(link);
             container.appendChild(child);
             // alert(list.lat+" "+list.lng)
-            alert(getMobileOperatingSystem());
         }
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
