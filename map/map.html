@@ -51,6 +51,7 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 20,
         });
 
@@ -80,8 +81,15 @@
 
         // do when map clicked
         function onMapClick(e) {
-            loc.bindPopup("You are within " + radius + " meters from this point <br>"
-                + e.latlng.lat + " " + e.latlng.lng).openPopup();
+            fetch('https://nominatim.openstreetmap.org/reverse?lat=13.782882215006328&lon=121.0710257291794&format=json')
+            .then(response => response.json())
+            .then(data => {
+
+                loc.bindPopup("You are within " + radius + " meters from this point <br>"
+                + e.latlng.lat + " " + e.latlng.lng+"<br>"+data.display_name).openPopup();
+            });
+
+            
         }
 
         // When Located
