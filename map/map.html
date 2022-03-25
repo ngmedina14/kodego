@@ -82,14 +82,14 @@
         // do when map clicked
         function onMapClick(e) {
             fetch('https://nominatim.openstreetmap.org/reverse?lat=13.782882215006328&lon=121.0710257291794&format=json')
-            .then(response => response.json())
-            .then(data => {
+                .then(response => response.json())
+                .then(data => {
 
-                loc.bindPopup("You are within " + radius + " meters from this point <br>"
-                + e.latlng.lat + " " + e.latlng.lng+"<br>"+data.display_name).openPopup();
-            });
+                    loc.bindPopup("You are within " + radius + " meters from this point <br>"
+                        + e.latlng.lat + " " + e.latlng.lng + "<br>" + data.display_name).openPopup();
+                });
 
-            
+
         }
 
         // When Located
@@ -138,7 +138,28 @@
             child.appendChild(link);
             container.appendChild(child);
             // alert(list.lat+" "+list.lng)
+            alert(getMobileOperatingSystem());
         }
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
     </script>
 </body>
 
