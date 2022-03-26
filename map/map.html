@@ -134,7 +134,7 @@
             
             switch (getMobileOperatingSystem()){
                 case "iOS":
-                var src = link.setAttribute("href", `https://maps.apple.com/?ll=${list.lat},${list.lng}`);
+                var src = link.setAttribute("href", `https://maps.apple.com/?daddr=${list.lat},${list.lng}`);
                 break;
                 default:
                 var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
