@@ -131,7 +131,14 @@
             var list = loc.getLatLng()
             var child = document.createElement('div')
             var link = document.createElement('a')
-            var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
+            
+            switch (getMobileOperatingSystem()){
+                case "iOS":
+                var src = link.setAttribute("href", `https://maps.apple.com/?ll=${list.lat},${list.lng}`);
+                break;
+                default:
+                var src = link.setAttribute("href", `https://maps.google.com/?q=${list.lat},${list.lng}`);
+            }
             var text = document.createTextNode(`${list.lat},${list.lng} ${getMobileOperatingSystem()}`)
             link.appendChild(text);
             var container = document.getElementById('container')
@@ -142,10 +149,10 @@
         function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            // Windows Phone must come first because its UA also contains "Android"
-            if (/windows phone/i.test(userAgent)) {
-                return "Windows Phone";
-            }
+            // // Windows Phone must come first because its UA also contains "Android"
+            // if (/windows phone/i.test(userAgent)) {
+            //     return "Windows Phone";
+            // }
 
             if (/android/i.test(userAgent)) {
                 return "Android";
