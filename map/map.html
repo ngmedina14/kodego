@@ -81,7 +81,7 @@
 
         // do when map clicked
         function onMapClick(e) {
-            fetch('https://nominatim.openstreetmap.org/reverse?lat=13.782882215006328&lon=121.0710257291794&format=json')
+            fetch('https://nominatim.openstreetmap.org/reverse?lat='+e.latlng.lat+'&lon='+e.latlng.lng+'&format=json')
                 .then(response => response.json())
                 .then(data => {
 
